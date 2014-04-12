@@ -3,7 +3,14 @@
 
 html, body {padding:0;margin:0;}
 
+
+
+
 /* GENERALIZED STYLES */
+/*--------------------*/
+
+
+
 body {
     overflow:auto;
 	font-family: 'Lato', Calibri, Arial, sans-serif;
@@ -14,7 +21,15 @@ a{
     text-decoration: none;
 }
 
+
+
+
 /*SPECIFIC CLASS STYLES */
+/*----------------------*/
+
+
+
+
 .main-background{
     width: 100%;
     height: 80%;
@@ -27,7 +42,7 @@ a{
     color: rgba(255,255,255,0.80);
 	margin-left: 10%;
 	margin-top: 5%;
-	width: 20%;
+	width: 30%;
 	text-align: left;
 	text-transform: uppercase;
     -webkit-transition: color 0.5s;
@@ -165,6 +180,9 @@ a{
     word-spacing: 0.2em;
     text-transform: uppercase;
 }
+.getStarted a{
+    display: block;
+}
 .getStarted div:first-child{
     color: rgba(25, 25, 50, 0.9);
     padding-bottom: 1em;
@@ -275,7 +293,7 @@ input[type=button] {
 }
 
 .info-container{
-    width: auto%;
+    width: auto;
     padding-left: 8%;
     cursor: default;
     height: 150px;
@@ -329,16 +347,6 @@ input[type=button] {
     -webkit-animation:drive 2.5s ease-in 5s 1 alternate; /* Chrome, Safari, Opera */
     animation:drive 2.5s ease-in 5s 1 alternate;
 }
-@-webkit-keyframes drive
-{
-0%   {left:-100px;}
-100% {left:95%;}
-}
-@keyframes drive
-{
-0%   {left:-100px;}
-100% {left:95%;}
-}
 .funcar img {
         -moz-transform: scaleX(-1);
         -o-transform: scaleX(-1);
@@ -349,8 +357,55 @@ input[type=button] {
 }
 
 
-/*Device / Smaller dimension compensation */
 
+
+
+/* ANIMATIONS GO HERE */
+/*--------------------*/
+
+
+
+
+@-webkit-keyframes drive
+{
+0%   {left:-100px;}
+100% {left:95%;}
+}
+@keyframes drive
+{
+0%   {left:-100px;}
+100% {left:95%;}
+}
+
+
+
+
+
+
+
+/*Device / Smaller dimension compensation */
+/*----------------------------------------*/
+
+
+
+
+@media screen and (max-width: 721px) {
+    .title{
+    width: 100%;
+    margin-left: 0;
+    text-align: center;
+    }
+    .title_info{
+    font-size: 1em;
+    }
+    .navigation-bar{
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+	-moz-transform: translateX(-50%);
+	-ms-transform: translateX(-50%);
+	transform: translateX(-50%);
+    }
+}
 @media screen and (max-width: 1451px) {
     .info-content{
     width: 250px;
@@ -358,9 +413,57 @@ input[type=button] {
     padding-left: 5em;
     }
 }
-@media screen and (max-width: 1011px) {
+@media screen and (max-width: 1308px) {
+    .info-page{
+        height: 1420px;
+    }
+    .priceAndButtonHold{
+        height: 500px;
+    }
+    .pricing-holder {
+        margin-left: 50%;
+    }
+    .getStarted{
+        margin-left: 50%;
+    -webkit-transform: translateX(-50%) translateY(10%);
+	-moz-transform: translateX(-50%) translateY(10%);
+	-ms-transform: translateX(-50%) translateY(10%);
+	transform: translateX(-50%) translateY(10%);
+
+    }
+    .funcar{
+        height: 0px;
+    }
+}
+@media screen and (max-width: 1239px) {
+    .title_info{
+    width: auto;
+    }
+}
+@media screen and (max-width: 1110px) {
     .info-content{
-    width: 250px;
-    padding-left: 2em;
+        padding-left: 0;
+        width: 100%;
+        height: 200px;
+    }
+    .info-container{
+        height: 40%;
+        padding: 0;
+    }
+}
+    .login{
+    margin-left: 30%;
+    }
+}
+
+
+@media screen and (max-height: 767px) {
+    .title{
+    margin-top: 3.5%;
+    }
+}
+@media screen and (max-height: 586px) {
+    .title{
+    margin-top: 2%;
     }
 }

@@ -1,0 +1,72 @@
+.Choice1 {
+    position: absolute;
+    background: rgba(255,255,255, 0.9);
+    top: 40%;
+    left: 33%;
+    width: 33%;
+    height: 44%;
+    -webkit-transform: translateX(-50%);
+	-moz-transform: translateX(-50%);
+	-ms-transform: translateX(-50%);
+	transform: translateX(-50%);
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+}
+.Choice1 a{
+    display: block;
+    z-index: 9999;
+    width: 100%;
+    height: 100%;
+}
+.Choice1:hover {
+    background: rgba(255,255,255, 1);
+    cursor: pointer;
+}
+.Choice1 div{
+    position: absolute;
+    color: rgba(0,0,0, 0.8);
+    left: 50%;
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: 2em;
+    top: 50%;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+	-moz-transform: translateX(-50%) translateY(-50%);
+	-ms-transform: translateX(-50%) translateY(-50%);
+	transform: translateX(-50%) translateY(-50%);
+
+}
+.Choice2 {
+    position: absolute;
+    background: rgba(255,255,255, 0.9);
+    top: 40%;
+    right: 33%;
+    width: 33%;
+    height: 44%;
+    -webkit-transform: translateX(50%);
+	-moz-transform: translateX(50%);
+	-ms-transform: translateX(50%);
+	transform: translateX(50%);
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+}
+.Choice2:hover {
+    background: rgba(255,255,255, 1);
+    cursor: pointer;
+}
+.Choice2 div{
+    position: absolute;
+    color: rgba(0,0,0, 0.8);
+    left: 50%;
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: 2em;
+    top: 50%;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+	-moz-transform: translateX(-50%) translateY(-50%);
+	-ms-transform: translateX(-50%) translateY(-50%);
+	transform: translateX(-50%) translateY(-50%);
+
+}

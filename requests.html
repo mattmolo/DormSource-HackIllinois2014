@@ -1,0 +1,70 @@
+<html>
+<head>
+        <meta name="viewport" content="width=device-width, initial-scale=0.6"/>
+        <title>Dorm Source</title>
+		<link rel="stylesheet" type="text/css" href="css/main.css" media="screen" title="no title"/>
+        <script type="text/javascript" src="https://cdn.firebase.com/v0/firebase.js"></script>
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+        <script type="text/javascript" src="js/main.js"></script>
+
+</head>
+<body>
+<div class="main-background">
+    <div class ="title_holder">
+        <div class="title_info">
+        List of requests to be processed:
+        </div>
+    </div>
+</div>
+
+<div class="form">
+    <form style="float: left">
+        <table id="table" border="1">
+        <tr>
+            <td width="5%"></td>
+            <td width="15%">Name</td>
+            <td width="15%">Place</td>
+            <td width="15%">Note</td>
+            <td width="15%">Phone</td>
+            <td width="15%">Location</td>
+            <td width="15%">Time</td>
+            <td width="5%"></td>
+        </tr>
+        </table>
+    </form>
+</div>
+
+
+<script type="text/javascript">
+var params = getParams();
+var key = unescape(params.key);
+var firebase = new Firebase("https://quickdelivery.firebaseio.com");
+var request = firebase.child('Requests/');
+var data = "";
+
+request.once('value',
+    function(dataSnapshot) {
+        dataSnapshot.forEach(
+            function(childSnapshot) {
+
+                $("#table").append(
+                    "<tr><td></td>" +
+                    + "<td>" + childSnapshot.child("Name").val() + "</td>"
+                    + "<td>" + childSnapshot.child("Name").val() + "</td>"
+                    + "<td>" + childSnapshot.child("Place").val() + "</td>"
+                    + "<td>" + childSnapshot.child("Note").val() + "</td>"
+                    + "<td>" + childSnapshot.child("Phone").val() + "</td>"
+                    + "<td>" + childSnapshot.child("Location").val() + "</td>"
+                    + "<td>" + childSnapshot.child("Time").val() + "</td>"
+                    + "</tr>"
+                    );
+
+            }
+        );
+    }
+);
+</script>
+
+
+</body>
+</html>

@@ -36,6 +36,7 @@ function addRequest() {
     var phoneI =  $("#phone").val();
     var notesI =  $("#notes").val();
     var requests = firebase.child('Requests');
+    var done = false;
 
     var request = requests.push( {
         Name: nameI,
@@ -44,19 +45,20 @@ function addRequest() {
         Phone: phoneI,
         Note: notesI,
         Time: getDateTime()
+    },
+    function() {
+        key = request.toString();
+        var idx = key.indexOf("Requests/");
+        key =  key.substring(idx + 10, key.length);
+        console.log(key);
+
+        NProgress.configure({ trickleRate: 0.1, trickleSpeed: 300, showSpinner: false });
+        NProgress.start();
+        setTimeout(function() {
+            NProgress.done();
+            confirm(key);
+        }, 800);
     });
-
-    key = request.toString();
-    var idx = key.indexOf("Requests/");
-    key =  key.substring(idx + 10, key.length);
-    console.log(key);
-
-    NProgress.configure({ trickleRate: 0.1, trickleSpeed: 300, showSpinner: false });
-    NProgress.start();
-    setTimeout(function() {
-        NProgress.done();
-        confirm(key);
-    }, 500);
  }
 
 function getParams() {

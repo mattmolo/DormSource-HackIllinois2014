@@ -48,7 +48,8 @@ function addRequest() {
 
     key = request.toString();
     var idx = key.indexOf("Requests/");
-    key =  key.substring(idx, key.length);
+    key =  key.substring(idx + 10, key.length);
+    console.log(key);
 
     NProgress.configure({ trickleRate: 0.1, trickleSpeed: 300, showSpinner: false });
     NProgress.start();

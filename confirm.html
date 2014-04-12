@@ -34,7 +34,7 @@
 var params = getParams();
 var key = unescape(params.key);
 var firebase = new Firebase("https://quickdelivery.firebaseio.com");
-var request = firebase.child(key);
+var request = firebase.child('Requests/-' + key);
 var data = "";
 
 request.once('value',

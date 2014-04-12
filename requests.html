@@ -51,7 +51,7 @@ request.once('value',
             function(childSnapshot) {
 
                 $("#table").append(
-                    '<tr onclick="window.location = \'confirm.html?key=' + childSnapshot.name() + '\';"> ' +
+                    '<tr onclick="window.location = \'acknowledge.html?key=' + childSnapshot.name() + '\';"> ' +
                     + "<td>" + childSnapshot.child("Name").val() + "</td>"
                     + "<td>" + childSnapshot.child("Name").val() + "</td>"
                     + "<td>" + childSnapshot.child("Place").val() + "</td>"

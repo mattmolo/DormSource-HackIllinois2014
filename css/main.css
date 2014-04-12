@@ -4,7 +4,7 @@ html, body {padding:0;margin:0;}
 
 /* GENERALIZED STYLES */
 body {
-    overflow:auto; 
+    overflow:auto;
 	font-family: 'Lato', Calibri, Arial, sans-serif;
 	color: #FFF;
 	background: #CC2900;
@@ -82,7 +82,7 @@ a {
     font-size: 2em;
     -webkit-transform: translateX(-50%);
 	-moz-transform: translateX(-50%);
-	-ms-transform: translateX(-50%); 
+	-ms-transform: translateX(-50%);
 	transform: translateX(-50%);
 }
 .login div{
@@ -97,6 +97,21 @@ a {
 }
 .login div:hover{
     background: rgba(255,255,255,0.5);
+}
+.form{
+    position: absolute;
+    top: 30%;
+    font-weight: 300;
+    width: 450px;
+    padding: 1em 1em;
+    text-align: center;
+    text-transform: uppercase;
+    left: 22%;
+    font-size: 2em;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
 }
 .page-transition{
     background: rgba(255,255,255,0.5);

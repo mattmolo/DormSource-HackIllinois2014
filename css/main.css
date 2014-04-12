@@ -17,7 +17,6 @@ a {
 .main-background{
     width: 100%;
     height: 80%;
-
 }
 .title{
 	font-weight: 400;
@@ -106,8 +105,8 @@ a {
     height: 2%;
 }
 .info-page{
+
     background: brown;
     width: 100%;
     height: 100%;
-
 }

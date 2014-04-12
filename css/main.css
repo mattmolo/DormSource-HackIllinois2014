@@ -376,7 +376,12 @@ input[type=button]:hover {
         filter: FlipH;
         -ms-filter: "FlipH";
 }
-
+.bigText {
+    width: 50%;
+}
+.bigTextInfo {
+    width: 50%;
+}
 
 
 
@@ -425,6 +430,9 @@ input[type=button]:hover {
 	-moz-transform: translateX(-50%);
 	-ms-transform: translateX(-50%);
 	transform: translateX(-50%);
+    }
+    .bigTextInfo {
+    font-size: 0.9em;
     }
 }
 @media screen and (max-width: 1451px) {

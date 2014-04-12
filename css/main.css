@@ -276,10 +276,23 @@ input[type=button] {
   background: #920000;
   border: none;
   padding: 5px 10px;
-  cursor: pointer; }
-  input[type=button]:hover {
-    background: #620000; }
+  cursor: pointer;
+}
 
+input[type=button]:hover {
+    background: #620000;
+}
+
+.requests{
+    position: absolute;
+    top: 30%;
+    font-size: 15px;
+    width: 90%;
+    padding: 2em 1em;
+    text-align: left;
+    text-transform: uppercase;
+    left: 5%;
+}
 .page-transition{
     background: rgba(255,255,255,0.5);
     width: 100%;

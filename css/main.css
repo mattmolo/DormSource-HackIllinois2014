@@ -27,7 +27,7 @@ a{
     color: rgba(255,255,255,0.80);
 	margin-left: 10%;
 	margin-top: 5%;
-	width: 50%;
+	width: auto;
 	text-align: left;
 	text-transform: uppercase;
     -webkit-transition: color 0.5s;
@@ -43,8 +43,6 @@ a{
     transition: color 0.5s;
 }
 .title:hover{
-    color: rgba(255,255,255,1);
-    cursor: pointer;
 }
 .title a:hover{
     color: rgba(255,255,255,1);
@@ -118,6 +116,76 @@ a{
     -moz-transition: opacity 0.5s;
     -ms-transition: opacity 0.5s;
     transition: opacity 0.5s;
+}
+.priceAndButtonHold {
+    width: 100%;
+    height: 400px;
+    padding-top: 1em;
+/*     background: rgba(255,255,255, 0.7); */
+
+}
+.pricing-holder{
+    float: left;
+    top:50%;
+    background: rgb(255,255,255);
+    width: 400px;
+    margin-left: 33%;
+    padding: 1em 1em;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+        -webkit-transform: translateX(-50%);
+	-moz-transform: translateX(-50%);
+	-ms-transform: translateX(-50%);
+	transform: translateX(-50%);
+}
+.pricing-holder div{
+    color: rgba(25, 25, 50, 0.9);
+    width: 100%;
+    text-align: center;
+}
+.pricing-holder h1{
+    font-size: 5em;
+}
+.getStarted{
+    float: left;
+    top:0%;
+    background: rgb(255,255,255);
+    width: 400px;
+    padding: 1em 1em;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+}
+.getStarted div{
+    width: 100%;
+    font-weight: 300;
+    text-align: center;
+    font-size: 1.3em;
+    word-spacing: 0.2em;
+    text-transform: uppercase;
+}
+.getStarted div:first-child{
+    color: rgba(25, 25, 50, 0.9);
+    padding-bottom: 1em;
+}
+.button {
+    color: rgba(255, 255, 255, 0.9);
+    background: rgba(50,10,0, 0.5);
+    padding: 0.1em, 0.1em;
+    padding-top: 2em;
+    padding-bottom: 2em;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    -webkit-transition: background 0.5s;
+    -moz-transition: background 0.5s;
+    -ms-transition: background 0.5s;
+    transition: background 0.5s;
+}
+.button:hover{
+    background: rgba(0,0,0, 0.4);
+    cursor: pointer;
 }
 .login{
     position: absolute;
@@ -203,7 +271,7 @@ input[type=button] {
 .info-page{
     background: brown;
     width: 100%;
-    height: 100%;
+    height: 900px;
 }
 
 .info-container{
@@ -219,9 +287,9 @@ input[type=button] {
 .info-content{
     height: 100%;
     float: left;
-    padding-left: 9em;
+    padding-left: 8.5%;
     font-size: 1.1em;
-    color: rgba(25, 25, 112, 0.5);
+    color: rgba(25, 25, 50, 0.7);
     width: 320px;
     text-align:center;
     word-spacing: 0.2em;

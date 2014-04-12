@@ -116,10 +116,9 @@ a {
 .page-transition{
     background: rgba(255,255,255,0.5);
     width: 100%;
-    height: 2%;
+    height: 1%;
 }
 .info-page{
-
     background: brown;
     width: 100%;
     height: 100%;
@@ -127,13 +126,46 @@ a {
 
 .info-container{
     width: 100%;
-    margin-top: 1em;
+    cursor: default;
+    height: 150px;
+    margin-top: 3em;
     background: rgba(255,255,255,0.95);
     padding: 1em 1em;
 }
 .info-content{
+    height: 100%;
+    float: left;
     padding-left: 9em;
-    color: #999;
+    font-size: 1.1em;
+    color: rgba(25, 25, 112, 0.5);
+    width: 320px;
+    text-align:center;
     word-spacing: 0.2em;
     text-transform: uppercase;
+}
+
+
+
+
+
+
+
+
+/*Device / Smaller dimension compensation */
+
+@media screen and (max-width: 1451px) {
+    .info-content{
+    width: 250px;
+    font-size: 1em;
+    padding-left: 5em;
+    }
+    .title2{
+    width: 100%;
+    }
+}
+@media screen and (max-width: 1011px) {
+    .info-content{
+    width: 250px;
+    padding-left: 2em;
+    }
 }

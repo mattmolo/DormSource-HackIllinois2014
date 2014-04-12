@@ -58,7 +58,9 @@
 <script type="text/javascript">
 var params = getParams();
 var key = unescape(params.access_token);
-document.write(key);
+$.get("https://api.venmo.com/v1/me?access_token=" + key, function( data ) {
+    console.log(data);
+});
 </script>
 
 

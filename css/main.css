@@ -102,17 +102,27 @@ a {
     position: absolute;
     top: 30%;
     font-weight: 300;
-    width: 450px;
-    padding: 1em 1em;
-    text-align: center;
+    width: 100%;
+    padding: 2em 1em;
+    text-align: left;
     text-transform: uppercase;
-    left: 22%;
+    left: 8%;
     font-size: 2em;
-    -webkit-transform: translateX(-50%);
-    -moz-transform: translateX(-50%);
-    -ms-transform: translateX(-50%);
-    transform: translateX(-50%);
 }
+
+.form input{
+    height: 2.5em;
+    width: 300px;
+    font-size: 15px;
+    margin-top: 0.3em;
+/*    -webkit-transform-o: translateY(-25%);
+    -moz-transform: translateY(-25%);
+    -ms-transform: translateY(-25%);
+    transform: translateY(-25%);*/
+
+
+}
+
 .page-transition{
     background: rgba(255,255,255,0.5);
     width: 100%;

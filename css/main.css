@@ -117,13 +117,16 @@ a {
     width: 300px;
     font-size: 15px;
     margin-top: 0.3em;
-/*    -webkit-transform-o: translateY(-25%);
-    -moz-transform: translateY(-25%);
-    -ms-transform: translateY(-25%);
-    transform: translateY(-25%);*/
-
-
 }
+
+input[type=button] {
+  color: #fff;
+  background: #920000;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer; }
+  input[type=button]:hover {
+    background: #620000; }
 
 .page-transition{
     background: rgba(255,255,255,0.5);

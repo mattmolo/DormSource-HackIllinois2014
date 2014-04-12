@@ -28,15 +28,6 @@ function confirm(key) {
     }, 300);
 }
 
-function getData(key) {
-    var firebase = new Firebase("https://quickdelivery.firebaseio.com");
-    firebase.once('value', function(dataSnapshot) {
-            jQuery.each(dataSnapshot, function() {
-                document.write(this);
-            });
-        });
-}
-
 function addRequest() {
     var firebase = new Firebase("https://quickdelivery.firebaseio.com");
     var nameI =  $("#name").val();
@@ -47,7 +38,6 @@ function addRequest() {
     var requests = firebase.child('Requests');
 
     var request = requests.push( {
-        Order: "001",
         Name: nameI,
         Place: placeI,
         Location: locationI,
@@ -58,14 +48,14 @@ function addRequest() {
 
     key = request.toString();
     var idx = key.indexOf("Requests/");
-    key =  key.substring(idx + 10, key.length);
+    key =  key.substring(idx, key.length);
 
-    NProgress.configure({ trickleRate: 0.1, trickleSpeed: 600, showSpinner: false });
+    NProgress.configure({ trickleRate: 0.1, trickleSpeed: 300, showSpinner: false });
     NProgress.start();
     setTimeout(function() {
         NProgress.done();
         confirm(key);
-    }, 2000);
+    }, 500);
  }
 
 function getParams() {

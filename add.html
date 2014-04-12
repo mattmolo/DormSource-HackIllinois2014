@@ -21,42 +21,29 @@
 </div>
 
 <div class="form">
-<form style="float: left">
-    <table>
-    <tr>
-        <td width="25%">
-            Name: <br><input id="name" type="text" name="Name"><br>
-            Place: <br><input id="place" type="text" name="Place"><br>
-            Location: <br><input id="location" type="text" name="Location"><br>
-            Phone Number: <br><input id="phone" type="tel" name="PhoneNumber"><br>
-        </td>
-        <td style="padding-left: 20px" width="50%">
-            Add what you want here. Make sure to include everything that the delivery person will need, and anything for them to be careful of(allergies.)<br>
-            <textarea id="notes" cols="80" rows="10"></textarea>
-        </td>
-        <td width="25%"></td>
-    </tr>
-    <tr>
-    <td>
-    <input type="button" onclick="add()" value="Add stuffs!">
-    </td>
-    </tr>
-    </table>
-</form>
+    <form style="float: left">
+        <table>
+            <tr>
+                <td width="25%">
+                    Name: <br><input id="name" type="text" name="Name"><br>
+                    Place: <br><input id="place" type="text" name="Place"><br>
+                    Location: <br><input id="location" type="text" name="Location"><br>
+                    Phone Number: <br><input id="phone" type="tel" name="PhoneNumber"><br>
+                </td>
+                <td style="padding-left: 20px" width="50%">
+                    Add what you want here. Make sure to include everything that the delivery person will need, and anything for them to be careful of(allergies.)<br>
+                    <textarea id="notes" cols="80" rows="10"></textarea>
+                </td>
+                <td width="25%"></td>
+            </tr>
+                <tr>
+                <td>
+                <input type="button" onclick="addRequest()" value="Add stuffs!">
+                </td>
+            </tr>
+        </table>
+    </form>
 </div>
-
-
-<script>
-
-function add() {
-    //NProgress.start();
-    addRequest();
-    //NProgress.set(0.4);
-    //NProgress.done();
-}
-
-</script>
-
 
 </body>
 </html>

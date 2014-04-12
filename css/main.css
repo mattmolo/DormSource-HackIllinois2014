@@ -34,8 +34,18 @@ a{
     -ms-transition: color 0.5s;
     transition: color 0.5s;
 }
-
+.title a{
+    color: rgba(255,255,255,0.80);
+    -webkit-transition: color 0.5s;
+    -moz-transition: color 0.5s;
+    -ms-transition: color 0.5s;
+    transition: color 0.5s;
+}
 .title:hover{
+    color: rgba(255,255,255,1);
+    cursor: pointer;
+}
+.title a:hover{
     color: rgba(255,255,255,1);
     cursor: pointer;
 }
@@ -132,6 +142,7 @@ a{
     width: 100%;
     background: rgba(100,100,100,0.4);
     padding: 0.2em 0.2em;
+    z-index: 99999;
 }
 .nav-top div{
     float: right;

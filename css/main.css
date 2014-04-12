@@ -9,10 +9,10 @@ body {
 	color: #FFF;
 	background: #CC2900;
 }
-
-a {
-	text-decoration: none;
+a{
+    text-decoration: none;
 }
+
 /*SPECIFIC CLASS STYLES */
 .main-background{
     width: 100%;
@@ -23,13 +23,18 @@ a {
 	font-size: 3.8em;
 	line-height: 1;
 	letter-spacing: 6px;
-    color: rgba(255,255,255,0.85);
+    color: rgba(255,255,255,0.80);
 	margin-left: 0%;
 	padding-top: 5%;
 	width: 50%;
 	text-align: center;
 	text-transform: uppercase;
+    -webkit-transition: color 0.5s;
+    -moz-transition: color 0.5s;
+    -ms-transition: color 0.5s;
+    transition: color 0.5s;
 }
+
 .title:hover{
     color: rgba(255,255,255,1);
     cursor: pointer;
@@ -44,6 +49,10 @@ a {
 	width: 60%;
 	text-align: center;
 	text-transform: uppercase;
+    -webkit-transition: color 0.5s;
+    -moz-transition: color 0.5s;
+    -ms-transition: color 0.5s;
+    transition: color 0.5s;
 }
 .title2:hover{
     color: rgba(255,255,255,1);
@@ -66,6 +75,10 @@ a {
     padding-top: 1em;
     padding-bottom: 1em;
     top: 20%;
+    -webkit-transition: background 0.5s;
+    -moz-transition: background 0.5s;
+    -ms-transition: background 0.5s;
+    transition: background 0.5s;
 }
 .title_holder:hover{
     background: rgba(255,255,255,0.25);
@@ -93,10 +106,10 @@ a {
     cursor: pointer;
     margin: .2em .2em;
     padding: .2em .2em;
-    -webkit-transition: 1s;
-	-moz-transition: 1s;
-	-ms-transition: 1s;
-    transition: 1s;
+    -webkit-transition: background 1s;
+	-moz-transition: background 1s;
+	-ms-transition: background 1s;
+    transition: background 1s;
 }
 .login div:hover{
     background: rgba(255,255,255,0.5);
@@ -157,9 +170,32 @@ a {
     word-spacing: 0.2em;
     text-transform: uppercase;
 }
+.navigation-bar{
+    position: absolute;
+    right: 10%;
+    top: -58%;
+    width: 400px;
+    padding: 0.3em 0.3em;
+    text-transform: uppercase;
+    text-align: center;
+    word-spacing: 85px;
+    background: rgba(255, 255, 255, 0.05);
+    -webkit-transition: background 0.5s;
+    -moz-transition: background 0.5s;
+    -ms-transition: background 0.5s;
+    transition: background 0.5s;
+}
+.navigation-bar:hover{
+    background: rgba(255, 255, 255, 0.1);
+}
+.navigation-bar a{
+    color:#fff;
+    text-decoration: none;
 
-
-
+}
+.navigation-bar a:hover{
+    text-shadow: 2px 2px rgba(0,0,0,0.4);
+}
 
 
 

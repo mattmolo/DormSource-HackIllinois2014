@@ -93,6 +93,8 @@ a {
     margin: .2em .2em;
     padding: .2em .2em;
     -webkit-transition: 1s;
+	-moz-transition: 1s;
+	-ms-transition: 1s;
     transition: 1s;
 }
 .login div:hover{

@@ -55,7 +55,7 @@ a {
 	line-height: 1;
 	letter-spacing: 6px;
 	margin-left: 10%;
-	width: 100%;
+	width: 60%;
 	text-align: left;
 	text-transform: uppercase;
 }
@@ -63,7 +63,8 @@ a {
     position: absolute;
     background: rgba(255,255,255,0.2);
 	width: 100%;
-    padding: 1em 1em;
+    padding-top: 1em;
+    padding-bottom: 1em;
     top: 20%;
 }
 .title_holder:hover{
@@ -142,7 +143,8 @@ a {
     height: 150px;
     margin-top: 3em;
     background: rgba(255,255,255,0.95);
-    padding: 1em 1em;
+    padding-top: 1em;
+    padding-bottom: 1em;
 }
 .info-content{
     height: 100%;
@@ -155,8 +157,6 @@ a {
     word-spacing: 0.2em;
     text-transform: uppercase;
 }
-
-
 
 
 

@@ -27,7 +27,7 @@ a{
     color: rgba(255,255,255,0.80);
 	margin-left: 10%;
 	margin-top: 5%;
-	width: auto;
+	width: 20%;
 	text-align: left;
 	text-transform: uppercase;
     -webkit-transition: color 0.5s;
@@ -275,7 +275,7 @@ input[type=button] {
 }
 
 .info-container{
-    width: 100%;
+    width: auto%;
     padding-left: 8%;
     cursor: default;
     height: 150px;

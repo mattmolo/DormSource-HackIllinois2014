@@ -57,7 +57,7 @@ a{
 	letter-spacing: 6px;
     color: rgba(255,255,255,0.85);
 	padding-top: 5%;
-	width: 60%;
+	width: 100%;
 	text-align: center;
 	text-transform: uppercase;
     -webkit-transition: color 0.5s;
@@ -208,6 +208,7 @@ input[type=button] {
 
 .info-container{
     width: 100%;
+    padding-left: 8%;
     cursor: default;
     height: 150px;
     margin-top: 3em;
@@ -287,9 +288,6 @@ input[type=button] {
     width: 250px;
     font-size: 1em;
     padding-left: 5em;
-    }
-    .title2{
-    width: 100%;
     }
 }
 @media screen and (max-width: 1011px) {

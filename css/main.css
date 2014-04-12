@@ -13,22 +13,23 @@ body {
 a {
 	text-decoration: none;
 }
-
 /*SPECIFIC CLASS STYLES */
+.main-background{
+    width: 100%;
+    height: 80%;
 
+}
 .title{
-    position: absolute;
 	font-weight: 400;
-	font-size: 4.4em;
+	font-size: 3.8em;
 	line-height: 1;
 	letter-spacing: 6px;
     color: rgba(255,255,255,0.85);
 	margin: 0;
-	top: 12%;
-	width: 100%;
+	padding-top: 5%;
+	width: 50%;
 	text-align: center;
 	text-transform: uppercase;
-	word-spacing: -0.3em;
 }
 .title:hover{
     color: rgba(255,255,255,1);
@@ -36,12 +37,12 @@ a {
 }
 .title_info{
 	font-weight: 300;
-	font-size: 3em;
+	font-size: 1.5em;
 	line-height: 1;
 	letter-spacing: 6px;
-	margin: 0;
+	margin-left: 200px;
 	width: 100%;
-	text-align: center;
+	text-align: left;
 	text-transform: uppercase;
 }
 .title_holder{
@@ -49,9 +50,48 @@ a {
     background: rgba(255,255,255,0.2);
 	width: 100%;
     padding: 1em 1em;
-    top: 22%;
+    top: 20%;
 }
 .title_holder:hover{
     background: rgba(255,255,255,0.25);
     cursor: default;
+}
+.login{
+    position: absolute;
+    top: 50%;
+    font-weight: 300;
+    width: 450px;
+    padding: 1em 1em;
+    text-align: center;
+    text-transform: uppercase;
+    left: 25%;
+    font-size: 2em;
+    -webkit-transform: translateX(-50%);
+	-moz-transform: translateX(-50%);
+	-ms-transform: translateX(-50%); 
+	transform: translateX(-50%);
+}
+.login div{
+    background: rgba(255,255,255,0.3);
+    margin: .2em .2em;
+    word-spacing: 0.2em;
+    cursor: pointer;
+    margin: .2em .2em;
+    padding: .2em .2em;
+    -webkit-transition: 1s;
+    transition: 1s;
+}
+.login div:hover{
+    background: rgba(255,255,255,0.5);
+}
+.page-transition{
+    background: rgba(255,255,255,0.5);
+    width: 100%;
+    height: 2%;
+}
+.info-page{
+    background: brown;
+    width: 100%;
+    height: 100%;
+
 }

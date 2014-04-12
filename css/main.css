@@ -251,7 +251,32 @@ input[type=button] {
 .navigation-bar a:hover{
     text-shadow: 2px 2px rgba(0,0,0,0.4);
 }
-
+.funcar {
+    position: relative;
+    left: -100px;
+    width: 100px;
+    height: 100px;
+    -webkit-animation:drive 2.5s ease-in 5s 1 alternate; /* Chrome, Safari, Opera */
+    animation:drive 2.5s ease-in 5s 1 alternate;
+}
+@-webkit-keyframes drive
+{
+0%   {left:-100px;}
+100% {left:95%;}
+}
+@keyframes drive
+{
+0%   {left:-100px;}
+100% {left:95%;}
+}
+.funcar img {
+        -moz-transform: scaleX(-1);
+        -o-transform: scaleX(-1);
+        -webkit-transform: scaleX(-1);
+        transform: scaleX(-1);
+        filter: FlipH;
+        -ms-filter: "FlipH";
+}
 
 
 /*Device / Smaller dimension compensation */

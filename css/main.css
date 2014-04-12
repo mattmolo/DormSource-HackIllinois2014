@@ -25,7 +25,7 @@ a {
 	line-height: 1;
 	letter-spacing: 6px;
     color: rgba(255,255,255,0.85);
-	margin: 0;
+	margin-left: 0%;
 	padding-top: 5%;
 	width: 50%;
 	text-align: center;
@@ -35,12 +35,28 @@ a {
     color: rgba(255,255,255,1);
     cursor: pointer;
 }
+.title2{
+	font-weight: 400;
+	font-size: 3.8em;
+	line-height: 1;
+	letter-spacing: 6px;
+    color: rgba(255,255,255,0.85);
+	margin-left: 5%;
+	padding-top: 5%;
+	width: 50%;
+	text-align: center;
+	text-transform: uppercase;
+}
+.title2:hover{
+    color: rgba(255,255,255,1);
+    cursor: pointer;
+}
 .title_info{
 	font-weight: 300;
 	font-size: 1.5em;
 	line-height: 1;
 	letter-spacing: 6px;
-	margin-left: 200px;
+	margin-left: 10%;
 	width: 100%;
 	text-align: left;
 	text-transform: uppercase;
@@ -58,13 +74,13 @@ a {
 }
 .login{
     position: absolute;
-    top: 50%;
+    top: 30%;
     font-weight: 300;
     width: 450px;
     padding: 1em 1em;
     text-align: center;
     text-transform: uppercase;
-    left: 25%;
+    left: 22%;
     font-size: 2em;
     -webkit-transform: translateX(-50%);
 	-moz-transform: translateX(-50%);

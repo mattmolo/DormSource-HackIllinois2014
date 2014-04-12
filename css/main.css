@@ -2,7 +2,7 @@
 
 html, body {padding:0;margin:0;}
 
-
+/* GENERALIZED STYLES */
 body {
     overflow:auto; 
 	font-family: 'Lato', Calibri, Arial, sans-serif;
@@ -10,18 +10,29 @@ body {
 	background: #CC2900;
 }
 
+a {
+	text-decoration: none;
+}
+
+/*SPECIFIC CLASS STYLES */
+
 .title{
     position: absolute;
 	font-weight: 400;
 	font-size: 4.4em;
 	line-height: 1;
 	letter-spacing: 6px;
+    color: rgba(255,255,255,0.85);
 	margin: 0;
 	top: 12%;
 	width: 100%;
 	text-align: center;
 	text-transform: uppercase;
 	word-spacing: -0.3em;
+}
+.title:hover{
+    color: rgba(255,255,255,1);
+    cursor: pointer;
 }
 .title_info{
 	font-weight: 300;
@@ -39,4 +50,8 @@ body {
 	width: 100%;
     padding: 1em 1em;
     top: 22%;
+}
+.title_holder:hover{
+    background: rgba(255,255,255,0.25);
+    cursor: default;
 }

@@ -1,2 +1,6 @@
-HackIllinois!  
-GitHub -- Matt Molo & John Lee & Tom
+HackIllinois App!
+
+Crowd Source Delivery Service
+Uses Firebase database to hold data and Venmo to authenticate users and pay them.
+
+Created by: Matt Molo, John Lee, Tom Hickey

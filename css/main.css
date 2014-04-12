@@ -34,8 +34,18 @@ a{
     -ms-transition: color 0.5s;
     transition: color 0.5s;
 }
-
+.title a{
+    color: rgba(255,255,255,0.80);
+    -webkit-transition: color 0.5s;
+    -moz-transition: color 0.5s;
+    -ms-transition: color 0.5s;
+    transition: color 0.5s;
+}
 .title:hover{
+    color: rgba(255,255,255,1);
+    cursor: pointer;
+}
+.title a:hover{
     color: rgba(255,255,255,1);
     cursor: pointer;
 }
@@ -84,6 +94,30 @@ a{
     background: rgba(255,255,255,0.25);
     cursor: default;
 }
+.desc-img{
+    position:absolute;
+    top: 30%;
+    height: 55%;
+    width: 100%;
+    background:  url(img/food.jpg),rgba(255,255,255,0.2);
+    opacity: 0.5;
+    -webkit-transition: opacity 0.5s;
+    -moz-transition: opacity 0.5s;
+    -ms-transition: opacity 0.5s;
+    transition: opacity 0.5s;
+}
+.desc-img2{
+    position:absolute;
+    top: 30%;
+    height: 55%;
+    width: 100%;
+    background:  url(img/oyster.jpg),rgba(255,255,255,0.2);
+    opacity: 0.5;
+    -webkit-transition: opacity 0.5s;
+    -moz-transition: opacity 0.5s;
+    -ms-transition: opacity 0.5s;
+    transition: opacity 0.5s;
+}
 .login{
     position: absolute;
     top: 30%;
@@ -113,6 +147,23 @@ a{
 }
 .login div:hover{
     background: rgba(255,255,255,0.5);
+}
+.nav-top{
+    position:fixed;
+    top:0;
+    width: 100%;
+    background: rgba(100,100,100,0.4);
+    padding: 0.2em 0.2em;
+    z-index: 99999;
+}
+.nav-top div{
+    float: right;
+    padding-right: 1em;
+    color:rgba(255,255,255,0.9);
+}
+.nav-top div:hover{
+    color:rgba(255,255,255,1);
+    cursor:pointer;
 }
 .form{
     position: absolute;

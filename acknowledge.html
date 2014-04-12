@@ -13,7 +13,7 @@
 <div class="nav-top">
     <div>
         Login
-    </div>  
+    </div>
     <a href="index.html">
         <div>
             Home
@@ -28,7 +28,7 @@
     </div>
 <a href="add.html">
     <div class="Choice1" style="top: 30%; width: 300px; height: 75px;">
-        <div>       
+        <div>
                 Yes
         </div>
     </div>
@@ -59,7 +59,7 @@
 var params = getParams();
 var key = unescape(params.key);
 var firebase = new Firebase("https://quickdelivery.firebaseio.com");
-var request = firebase.child('Requests/-' + key);
+var request = firebase.child('Requests/' + key);
 var data = "";
 
 request.once('value',

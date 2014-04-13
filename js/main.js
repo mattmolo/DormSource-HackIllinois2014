@@ -44,7 +44,7 @@ function addRequest(userId, json) {
     var notes =  $("#notes").val();
 
 
-    var Request = requests.push( {
+    var Request = Requests.push( {
         "user_id": user_id,
         "restaurant": restaurant,
         "address": address,

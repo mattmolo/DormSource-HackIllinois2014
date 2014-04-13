@@ -1,0 +1,15 @@
+<html>
+    <head>
+      <script type="text/javascript" src="https://cdn.firebase.com/v0/firebase.js"></script>
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+        <script type="text/javascript" src="nprogress/nprogress.js"></script>
+        <script type="text/javascript" src="js/main.js"></script>
+    </head>
+<body>
+<script>
+//Authorization popup window code
+var newWindow = window.open("","Login","width=328,height=425");
+newWindow.location = "https://api.venmo.com/v1/oauth/authorize?client_id=1685&scope=make_payments%20access_profile&response_type=token";
+</script>
+</body>
+</html>

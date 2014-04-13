@@ -44,9 +44,18 @@
 <script type="text/javascript">
 var params = getParams();
 var key = unescape(params.access_token);
-$.getJSON("https://api.venmo.com/v1/me?access_token=" + key, function(json) {
-    console.log(json);
-});
+if (window.opener != null){
+    window.opener.location = "https://quickdelivery.firebaseapp.com/redirect.html?access_token=" + key;
+    window.close();
+}
+if (window.location == "https://quickdelivery.firebaseapp.com/redirect.html?error=User+denied+your+application+access+to+his+or+her+protected+resources.")
+{
+    window.location = "https://quickdelivery.firebaseapp.com";
+}
+else
+{
+    window.location = "https://quickdelivery.firebaseapp.com/choice.html?access_token=" + key;
+}
 </script>
 
 

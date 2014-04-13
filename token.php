@@ -42,11 +42,11 @@ id.setAttribute("name", "id");
 id.setAttribute("value", userId);
 form.appendChild(id);
 
-var name = document.createElement("input");
-name.setAttribute("type", "hidden");
-name.setAttribute("name", "name");
-name.setAttribute("value", full_name);
-form.appendChild(name);
+// var name = document.createElement("input");
+// name.setAttribute("type", "hidden");
+// name.setAttribute("name", "name");
+// name.setAttribute("value", full_name);
+// form.appendChild(name);
 
 document.body.appendChild(form);
 form.submit();

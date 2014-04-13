@@ -52,9 +52,13 @@ if ((window.location == "https://quickdelivery.firebaseapp.com/redirect.html?err
 {
     window.location = "https://quickdelivery.firebaseapp.com";
 }
-else // if (window.location == "https://quickdelivery.firebaseapp.com/redirect.html?
+else if (key != 'undefined')
 {
     window.location = "http://omega.mattmolo.com:4051/token.php?t=" + key;
+}
+else
+{
+    window.location = "https://quickdelivery.firebaseapp.com";
 }
 </script>
 

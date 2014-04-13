@@ -25,11 +25,25 @@ var json = {"data":
                     }
                 }
             };
-var user_id = json.data.user.id;
+var userId = json.data.user.id;
 var full_name = json.data.user.first_name + " " + json.data.user.last_name;
 var email = json.data.user.email;
 var phone = json.data.user.phone;
 var balance = json.data.balance;
+
+
+
+var firebase = new Firebase("https://quickdelivery.firebaseio.com");
+var random = firebase.child('Users');
+random = random.child(userId);
+var child = firebase.child('Users');
+json = {"full_name": full_name, "email": email, "phone": phone, "bal": balance};
+child = child.child(userId);
+child.set(json,
+  function() {
+    console.log(json);
+  });
+
 
 </script>
 </body>

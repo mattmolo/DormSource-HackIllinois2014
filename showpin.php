@@ -41,7 +41,7 @@
     foreach ($json as $key => $value) {
         $req = file_get_contents('https://quickdelivery.firebaseio.com/Requests/'.$key.'.json');
         $req = json_decode($req, true);
-        if ($key2 == $key) echo '<h1>'.$req["pin"].'</h1>;'
+        if ($key2 == $key) echo '<h1>'.$req["pin"].'</h1>;';
     }
     ?>
 

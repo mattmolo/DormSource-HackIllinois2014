@@ -22,7 +22,7 @@
 <div class="main-background">
     <div class ="title_holder">
         <div class="title_info">
-        My account:
+        Available Deliveries:
         </div>
     </div>
 </div>

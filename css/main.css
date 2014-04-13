@@ -309,10 +309,10 @@ input[type=button]:hover {
     text-transform: uppercase;
     left: 5%;
 }
-.requests tr:nth-child(odd):not(:first-child){
+.requests tr:nth-child(odd){
     background: rgba(0,0,0,0.2);
 }
-.requests tr:hover{
+.requests tr:hover:not(:first-child){
     background: rgba(255,255,255,0.3);
     cursor: pointer;
 }

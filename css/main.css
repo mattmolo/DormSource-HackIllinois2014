@@ -97,6 +97,7 @@ a{
 }
 .account-button1{
 text-transform: uppercase;
+font-weight: 300;
 position: absolute;
 top: 90%;
 background: #BB19800;
@@ -115,6 +116,7 @@ font-size: 2em;
 .account-button2{
 text-transform: uppercase;
 position: absolute;
+font-weight: 300;
 top: 90%;
 right: 33%;
 background: #BB19800;

@@ -1,5 +1,5 @@
 <?php $id = $_POST['id'];
-      $name = $_POST['fname'];
+      $name = file_get_contents("https://quickdelivery.firebaseio.com/Users/.$id./full_name.json")
 ?>
 
 <html>

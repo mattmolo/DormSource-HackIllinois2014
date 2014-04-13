@@ -109,7 +109,6 @@ function post2(url, name1, value1, name2, value2) {
     form.submit();
 }
 
-
 function getParams() {
     var idx = document.URL.indexOf('?');
     var params = new Array();

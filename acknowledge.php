@@ -30,24 +30,14 @@ $key = $_POST['key'];
 </div>
 <div class="main-background">
     <div class ="title_holder">
-        <div class="title_info">
-        Are you sure you want to take this order?
-        </div>
+        <div class="title_info">Are you sure you want to take this order?</div>
     </div>
-<a href="add.html">
-    <div class="Choice1" style="top: 30%; width: 300px; height: 75px;">
-        <div>
-                Yes
-        </div>
+ <div onclick="confirmDeliv(<?php echo $key ?>)" class="Choice1" style="top: 30%; width: 300px; height: 75px;">
+        <div>Yes</div>
     </div>
-</a>
-<a href="requests.html">
-    <div class="Choice2" style="top: 30%; width: 300px;  height: 75px;">
-        <div>
-        No
-        </div>
+    <div onclick="delete(<?php echo $key ?>)" class="Choice2" style="top: 30%; width: 300px;  height: 75px;">
+        <div>No</div>
     </div>
-</a>
 </div>
 
 <div class="form" style="top: 34%;">
@@ -77,6 +67,20 @@ request.once('value',
         );
     }
 );
+
+function confirmDeliv(key) {
+    var firebase = new Firebase("https://quickdelivery.firebaseio.com");
+    var req = firebase.child("Requests/" + key);
+    req.child("confirmation").set("1");
+    post('account.php', 'id', <?php echo "'".$id."'" ?>);
+}
+
+function delete(key) {
+    var firebase = new Firebase("https://quickdelivery.firebaseio.com");
+    var req = firebase.child("Requests/" + key);
+    req.set();
+    post('account.php', 'id', <?php echo "'".$id."'" ?>);
+}
 
 </script>
 

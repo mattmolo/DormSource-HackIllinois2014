@@ -28,6 +28,11 @@ function confirm(key) {
     }, 300);
 }
 
+function login() {
+    var newWindow = window.open("","Login","width=328,height=425");
+    newWindow.location = "https://api.venmo.com/v1/oauth/authorize?client_id=1685&scope=make_payments%20access_profile&response_type=token";
+}
+
 function addRequest() {
     var firebase = new Firebase("https://quickdelivery.firebaseio.com");
     var nameI =  $("#name").val();

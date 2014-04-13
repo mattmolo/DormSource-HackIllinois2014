@@ -44,6 +44,10 @@ function addRequest(userId) {
     var User = firebase.child('Users/' + userId);
     var Requests = firebase.child('Requests/');
 
+    User.once('value', function(nameSnapshot) {
+    console.log(nameSnapshot.val());
+    });
+
     var full_name =  User.child("full_name").val();
     var phone =  User.child("phone").val();
     var email =  User.child("email").val();

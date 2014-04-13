@@ -45,7 +45,7 @@ echo '</table>';
 ?>
 
 
-<input class="account-button1" type="button" margin-right="20px" onclick="post('add.php', 'id', '<?php echo $id ?>')" value="Add stuffs!"><input class="account-button2" type="button" onclick="post('opendeliveries.php', 'id', '<?php echo $id ?>')" value="Volunteer!">
+<input class="account-button1" type="button" margin-right="20px" onclick="post('add.php', 'id', '<?php echo $id ?>')" value="Add stuffs!"><input class="account-button2" type="button" onclick="post2('opendeliveries.php', 'id', '<?php echo $id ?>', 'fname', '<?php echo $name ?>')" value="Volunteer!">
 
 
 

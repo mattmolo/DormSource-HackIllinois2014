@@ -76,7 +76,7 @@ UserRequests.once('value',
 </tr>
 </table>
 
-<input type="button" margin-right="20px" onclick="post('add.php', 'id', '<?php echo $id ?>')" value="Add stuffs!"><input type="button" onclick="post('opendeliveries.php', '<?php echo $id ?>')" value="Volunteer!">
+<input type="button" margin-right="20px" onclick="post('add.php', 'id', '<?php echo $id ?>')" value="Add stuffs!"><input type="button" onclick="post('opendeliveries.php', 'id', '<?php echo $id ?>')" value="Volunteer!">
 
 
 

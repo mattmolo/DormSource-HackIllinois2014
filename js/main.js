@@ -66,6 +66,20 @@ function addRequest() {
     });
  }
 
+function postId(url, id) {
+    form.setAttribute("method", "post");
+    form.setAttribute("action", url);
+    form.setAttribute("target", "_self");
+
+    var hiddenField = document.createElement("input");
+    hiddenField.setAttribute("type", "hidden");
+    hiddenField.setAttribute("name", "id");
+    hiddenField.setAttribute("value", id);
+    form.appendChild(hiddenField);
+    document.body.appendChild(form);
+    form.submit();
+}
+
 function getParams() {
     var idx = document.URL.indexOf('?');
     var params = new Array();

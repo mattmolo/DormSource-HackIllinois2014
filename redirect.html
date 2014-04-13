@@ -48,11 +48,11 @@ if (window.opener != null){
     window.opener.location = "https://quickdelivery.firebaseapp.com/redirect.html?access_token=" + key;
     window.close();
 }
-if (window.location == "https://quickdelivery.firebaseapp.com/redirect.html?error=User+denied+your+application+access+to+his+or+her+protected+resources." || window.location == "https://quickdelivery.firebaseapp.com/choice.html?access_token=undefined")
+if ((window.location == "https://quickdelivery.firebaseapp.com/redirect.html?error=User+denied+your+application+access+to+his+or+her+protected+resources.") || (window.location == "https://quickdelivery.firebaseapp.com/redirect.html?access_token=undefined"))
 {
     window.location = "https://quickdelivery.firebaseapp.com";
 }
-else
+else // if (window.location == "https://quickdelivery.firebaseapp.com/redirect.html?
 {
     window.location = "http://omega.mattmolo.com:4051/token.php?t=" + key;
 }

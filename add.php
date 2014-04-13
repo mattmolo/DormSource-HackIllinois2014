@@ -1,5 +1,6 @@
 <?php
   $id =  $_POST['id'];
+  $name = $_POST['fname'];
   $json = file_get_contents('https://quickdelivery.firebaseio.com/Users/'. $id.'.json');
 ?>
 
@@ -55,6 +56,8 @@
         </table>
     </form>
 </div>
+
+<input class="account-button1" type="button" value="Back" onclick="post2('account.php', 'id', '<?php echo $id ?>', 'fname', '<?php echo $name ?>')">
 
 </body>
 </html>

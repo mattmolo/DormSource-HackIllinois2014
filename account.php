@@ -39,7 +39,7 @@ $json = json_decode($json);
 foreach ($json as $key => $value) {
     $req = file_get_contents('https://quickdelivery.firebaseio.com/Requests/'.$key.'.json');
     $req = json_decode($req);
-    var_dump($req['name']);
+    var_dump($req);
     //echo '<tr><td></td><td>'.$req["name"].'</td><td>'.$req["restaurant"].'</td><td>'.$req["note"].'</td><td>'.$req["phone"].'</td><td>'.$req["address"].'</td><td>'.$req["time"].'</td><tr>';
     }
 echo '</table>';

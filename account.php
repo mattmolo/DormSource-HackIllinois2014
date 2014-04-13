@@ -32,7 +32,7 @@
 </div>
 
 <?php
-echo '<table id="table" class="requests"><tr style="font-size: 25px;"><td width="15%">Name</td><td width="15%">Restaurant</td><td width="25%">Note</td><td width="15%">Phone</td><td width="15%">Adress</td><td width="15%">Time</td></tr>';
+echo '<table id="table" class="requests"><tr style="font-size: 25px;"><td width="15%">Name</td><td width="15%">Restaurant</td><td width="25%">Note</td><td width="15%">Phone</td><td width="15%">Address</td><td width="15%">Time</td></tr>';
 $requests = 'https://quickdelivery.firebaseio.com/Users/' . $id . '/requests.json';
 $json = file_get_contents($requests);
 $json = json_decode($json);
@@ -40,7 +40,7 @@ foreach ($json as $key => $value) {
     $req = file_get_contents('https://quickdelivery.firebaseio.com/Requests/'.$key.'.json');
     $req = json_decode($req);
     var_dump($req);
-    echo '<tr><td></td><td>'.$req["name"].'</td><td>'.$req["restaurant"].'</td><td>'.$req["notes"].'</td><td>'.$req["phone"].'</td><td>'.$req["address"].'</td><td>'.$req["time"].'</td><tr>';
+    echo '<tr><td></td><td>'.$req["name"].'</td><td>'.$req["restaurant"].'</td><td>'.$req["note"].'</td><td>'.$req["phone"].'</td><td>'.$req["address"].'</td><td>'.$req["time"].'</td><tr>';
     }
 echo '</table>';
 ?>

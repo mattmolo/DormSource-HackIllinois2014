@@ -6,7 +6,7 @@
 <html>
 <head>
         <meta name="viewport" content="width=device-width, initial-scale=0.6"/>
-        <title>Pin/title>
+        <title>Pin</title>
 		<link rel="stylesheet" type="text/css" href="css/main.css" media="screen" title="no title"/>
         <link rel="stylesheet" type="text/css" href="nprogress/nprogress.css" media="screen" title="no title"/>
         <script type="text/javascript" src="https://cdn.firebase.com/v0/firebase.js"></script>

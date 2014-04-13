@@ -14,7 +14,7 @@
 <script type="text/javascript">
 
 var json = <?php echo $json; ?>;
-var token = <?php echo $token; ?>;
+var token = <?php echo \" . $token . \"; ?>';
 
 
 var userId = json.data.user.id;

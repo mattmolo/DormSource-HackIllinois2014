@@ -22,31 +22,23 @@ function getDateTime() {
     return dateTime;
     }
 
-function confirm(key) {
-    setTimeout(function() {
-        window.location.href = "confirm.html?key=" + key;
-    }, 300);
-}
-
 function login() {
     var newWindow = window.open("","Login","width=328,height=425, top=300, left=800");
     newWindow.location = "https://api.venmo.com/v1/oauth/authorize?client_id=1685&scope=make_payments%20access_profile%20access_email%20access_phone%20access_balance&response_type=token";
 }
+
 function loadPage(url) {
     var params = getParams();
     var key = unescape(params.access_token);
     window.location = url + key;
-
 }
 
-function addRequest(userId) {
+function addRequest(userId, json) {
     var firebase = new Firebase("https://quickdelivery.firebaseio.com");
-    var User = firebase.child('Users/' + userId);
     var Requests = firebase.child('Requests/');
 
-    //var full_name =  User.child("full_name").val();
-    //var phone =  User.child("phone").val();
-    //var email =  User.child("email").val();
+    var full_name =  json.full_name;
+    var phone =  json.phone;
     var restaurant =  $("#restaurant").val();
     var address =  $("#address").val();
     var notes =  $("#notes").val();
@@ -56,7 +48,7 @@ function addRequest(userId) {
         "user_id": user_id,
         "restaurant": restaurant,
         "address": address,
-        //"phone": phone,
+        "phone": phone,
         "note": notes,
         "time": getDateTime(),
         "pin" : Math.floor((Math.random()*8999)+1000),

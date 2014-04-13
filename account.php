@@ -26,7 +26,7 @@
 <div class="main-background">
     <div class ="title_holder">
         <div class="title_info">
-        My account: <?php echo $name ?>
+        My account: <?php echo $fname ?>
         </div>
     </div>
 </div>

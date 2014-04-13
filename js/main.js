@@ -44,13 +44,9 @@ function addRequest(userId) {
     var User = firebase.child('Users/' + userId);
     var Requests = firebase.child('Requests/');
 
-    User.once('value', function(nameSnapshot) {
-    console.log(nameSnapshot.val());
-    });
-
-    var full_name =  User.child("full_name").val();
-    var phone =  User.child("phone").val();
-    var email =  User.child("email").val();
+    //var full_name =  User.child("full_name").val();
+    //var phone =  User.child("phone").val();
+    //var email =  User.child("email").val();
     var restaurant =  $("#restaurant").val();
     var address =  $("#address").val();
     var notes =  $("#notes").val();
@@ -60,7 +56,7 @@ function addRequest(userId) {
         "user_id": user_id,
         "restaurant": restaurant,
         "address": address,
-        "phone": phone,
+        //"phone": phone,
         "note": notes,
         "time": getDateTime(),
         "pin" : Math.floor((Math.random()*8999)+1000),

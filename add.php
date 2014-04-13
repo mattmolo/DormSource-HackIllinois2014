@@ -1,6 +1,6 @@
 <?php
   $id =  $_POST['id'];
-  $json = file_get_contents('https://quickdelivery.firebaseio.com/Users/'. $id.'/');
+  $json = file_get_contents('https://quickdelivery.firebaseio.com/Users/'. $id.'.json');
 ?>
 
 <html>
@@ -19,7 +19,6 @@
 <body>
 <script type="text/javascript">
     console.log(<?php echo $json ?>);
-
 </script>
 <div class="nav-top">
     <div onClick="login()">

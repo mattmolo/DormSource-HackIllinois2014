@@ -1,3 +1,8 @@
+<?php
+  $id =  $_POST['id'];
+  $json = file_get_contents('https://quickdelivery.firebaseio.com/Users/'. $id.'/');
+?>
+
 <html>
 <head>
         <meta name="viewport" content="width=device-width, initial-scale=0.6"/>
@@ -12,6 +17,10 @@
 
 </head>
 <body>
+<script type="text/javascript">
+    console.log(<?php echo $json ?>);
+
+</script>
 <div class="nav-top">
     <div onClick="login()">
         Login
@@ -46,7 +55,7 @@
             </tr>
                 <tr>
                 <td>
-                <input type="button" onclick="addRequest(<?php echo $_POST['id'] ?>)" value="Add stuffs!">
+                <input type="button" onclick="addRequest(<?php echo $id ?>)" value="Add stuffs!">
                 </td>
             </tr>
         </table>

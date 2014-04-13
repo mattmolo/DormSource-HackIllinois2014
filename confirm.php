@@ -26,7 +26,7 @@
         Your order has been processed!
         </div>
     </div>
-    <div onslick="post('account.php', 'id', '<?php echo $_POST['id'] ?>')" class="Choice1" style="top: 80%; left:8%; width: 300px; height: 75px; -webkit-transform: translateX(10%);
+    <div onclick="post('account.php', 'id', '<?php echo $_POST['id'] ?>')" class="Choice1" style="top: 80%; left:8%; width: 300px; height: 75px; -webkit-transform: translateX(10%);
 	-moz-transform: translateX(50%);
 	-ms-transform: translateX(50%);
 	transform: translateX(50%);">

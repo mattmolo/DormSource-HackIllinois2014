@@ -1,5 +1,5 @@
 <?php $id = $_POST['id'];
-      $name = $_POST['fname'];
+$name = $_POST['fname'];
 ?>
 
 <html>
@@ -76,7 +76,7 @@ request.once('value',
 </table>
 
 
-<input class="account-button1" style="width: 5%;" type="button" value="Back" onclick="post('account.php', 'id', '<?php echo $id ?>')">
+<input class="account-button1" type="button" value="Back" onclick="post2('account.php', 'id', '<?php echo $id ?>', 'fname', '<?php echo $name ?>')">
 
 </body>
 </html>

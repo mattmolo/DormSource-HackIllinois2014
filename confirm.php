@@ -26,7 +26,7 @@
         Your order has been processed!
         </div>
     </div>
-<a href="choice.html">
+<a href="account.php">
     <div class="Choice1" style="top: 80%; left:8%; width: 300px; height: 75px; -webkit-transform: translateX(10%);
 	-moz-transform: translateX(50%);
 	-ms-transform: translateX(50%);

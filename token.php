@@ -1,8 +1,9 @@
+
 <?php
   $token =  htmlentities($_GET["t"]);
-  $json = file_get_contents('https://api.venmo.com/v1/me?access_token=' . $token;
+  echo $token;
+  $json = file_get_contents('https://api.venmo.com/v1/me?access_token=' . $token);
   echo $json;
-
 ?>
 
 

@@ -1,6 +1,6 @@
 <?php
   $id =  $_POST['id'];
-  $name = $_POST['fname'];
+  $key = $_POST['key'];
   $json = file_get_contents('https://quickdelivery.firebaseio.com/Users/'. $id.'.json');
 ?>
 
@@ -33,6 +33,21 @@
         </div>
     </div>
     <div class="bigText3">Please give this code to the deliverer when you recieve your food!</div>
+    <?php 
+
+    $id = $_POST['id'];
+    $key = $_POST['key'];
+
+    $requests = 'https://quickdelivery.firebaseio.com/Requests.json';
+    $json = file_get_contents($requests);
+    $json = json_decode($json); 
+    foreach ($json as $key2 => $value) {
+        $req = file_get_contents('https://quickdelivery.firebaseio.com/Requests/'.$key.'.json');
+        $req = json_decode($req, true);
+        if ($key2 == $key) echo '<h1>'.$req["pin"].';'
+    }
+    ?>
+
 </div>
 
 

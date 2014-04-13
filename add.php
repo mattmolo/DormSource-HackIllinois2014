@@ -50,7 +50,7 @@
             </tr>
                 <tr>
                 <td>
-                <input type="button" onclick='addRequest(<?php echo '"'.$id.'"' ?>, <?php echo $json ?>)' value="Add stuffs!">
+                <input type="button" onclick='addRequest(<?php echo '"'.$id.'"' ?>, <?php echo $json ?>)' value="Submit!">
                 </td>
             </tr>
         </table>

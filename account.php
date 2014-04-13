@@ -32,6 +32,8 @@
 
 var firebase = new Firebase("https://quickdelivery.firebaseio.com");
 var request = firebase.child('Requests/');
+var userId = <?php echo $_POST['userId']; ?>;
+console.log(userId);
 
 request.once('value',
     function(dataSnapshot) {

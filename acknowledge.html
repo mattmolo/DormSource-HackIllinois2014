@@ -61,7 +61,6 @@ var key = unescape(params.key);
 var firebase = new Firebase("https://quickdelivery.firebaseio.com");
 var request = firebase.child('Requests/' + key);
 var data = "";
-
 request.once('value',
     function(dataSnapshot) {
         dataSnapshot.forEach(
@@ -71,6 +70,11 @@ request.once('value',
         );
     }
 );
+
+function accept(){
+    var code = Math.floor((Math.random()*9999));
+
+}
 </script>
 
 

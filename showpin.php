@@ -1,13 +1,12 @@
 <?php
   $id =  $_POST['id'];
   $key = $_POST['key'];
-  $json = file_get_contents('https://quickdelivery.firebaseio.com/Users/'. $id.'.json');
 ?>
 
 <html>
 <head>
         <meta name="viewport" content="width=device-width, initial-scale=0.6"/>
-        <title>Add your Request</title>
+        <title>Pin/title>
 		<link rel="stylesheet" type="text/css" href="css/main.css" media="screen" title="no title"/>
         <link rel="stylesheet" type="text/css" href="nprogress/nprogress.css" media="screen" title="no title"/>
         <script type="text/javascript" src="https://cdn.firebase.com/v0/firebase.js"></script>
@@ -33,6 +32,7 @@
         </div>
     </div>
     <div class="bigText3">Please give this code to the deliverer when you recieve your food!</div>
+    
     <?php 
 
     $id = $_POST['id'];
@@ -44,7 +44,7 @@
     foreach ($json as $key2 => $value) {
         $req = file_get_contents('https://quickdelivery.firebaseio.com/Requests/'.$key.'.json');
         $req = json_decode($req, true);
-        if ($key2 == $key) echo '<h1>'.$req["pin"].';'
+        if ($key2 == $key) echo '<h1>'.$req["pin"].'</h1>;'
     }
     ?>
 

@@ -2,7 +2,7 @@
 <?php
   $token =  htmlentities($_GET["t"]);
   $json = file_get_contents('https://api.venmo.com/v1/me?access_token=' . $token);
-  echo $json;
+  echo "new"
 ?>
 
 
@@ -14,7 +14,7 @@
 <script type="text/javascript">
 
 var json = <?php echo $json; ?>;
-var token = <?php echo $token; ?>;
+var token = <?php echo "'".$token."'"; ?>;
 
 
 var userId = json.data.user.id;
@@ -31,7 +31,7 @@ User.child("email").set(email);
 User.child("phone").set(phone);
 User.child("bal").set(balance);
 
-window.location = '/choice.html?t=' + token;
+postId(account.php, userId);
 
 </script>
 </body></html>";

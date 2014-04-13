@@ -22,28 +22,16 @@
 <div class="main-background">
     <div class ="title_holder">
         <div class="title_info">
-        List of requests to be processed:
+        My account:
         </div>
     </div>
 </div>
-     <table id="table" class="requests">
-        <tr style="font-size: 25px;">
-            <td width="15%">Name</td>
-            <td width="15%">Place</td>
-            <td width="25%">Note</td>
-            <td width="15%">Phone</td>
-            <td width="15%">Location</td>
-            <td width="15%">Time</td>
-        </tr>
-    </table>
-
 
 <script type="text/javascript">
-var params = getParams();
-var key = unescape(params.key);
+
+
 var firebase = new Firebase("https://quickdelivery.firebaseio.com");
 var request = firebase.child('Requests/');
-var data = "";
 
 request.once('value',
     function(dataSnapshot) {
@@ -66,6 +54,20 @@ request.once('value',
     }
 );
 </script>
+
+<table id="table" class="requests">
+<tr style="font-size: 25px;">
+    <td width="15%">Name</td>
+    <td width="15%">Place</td>
+    <td width="25%">Note</td>
+    <td width="15%">Phone</td>
+    <td width="15%">Location</td>
+    <td width="15%">Time</td>
+</tr>
+</table>
+
+
+
 
 
 </body>

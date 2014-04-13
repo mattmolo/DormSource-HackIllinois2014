@@ -35,9 +35,6 @@
     
     <?php 
 
-    $id = $_POST['id'];
-    $key = $_POST['key'];
-
     $requests = 'https://quickdelivery.firebaseio.com/Requests.json';
     $json = file_get_contents($requests);
     $json = json_decode($json); 

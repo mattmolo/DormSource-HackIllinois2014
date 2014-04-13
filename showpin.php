@@ -32,7 +32,8 @@
         </div>
     </div>
     <div class="bigText3">Please give this code to the deliverer when you recieve your food!</div>
-    
+    <div class="pricing-holder" style="position: absolute; top: 50%; left: 50%; margin-left: 0;    -webkit-transform: translateX(-50%); -moz-transform: translateX(-50%); -ms-transform: translateX(-50%); transform: translateX(-50%);">
+    <div>
     <?php 
 
     $requests = 'https://quickdelivery.firebaseio.com/Requests.json';
@@ -41,14 +42,15 @@
     foreach ($json as $key => $value) {
         $req = file_get_contents('https://quickdelivery.firebaseio.com/Requests/'.$key.'.json');
         $req = json_decode($req, true);
-        if ($key2 == $key) echo '<h1>'.$req["pin"].'</h1>;';
+        if ($key2 == $key) echo '<h1>'.$req["pin"].'</h1>';
     }
     ?>
-
+</div>
+</div>
 </div>
 
 
-<input class="account-button1" type="button" value="Back" onclick="post('account.php', 'id', '<?php echo $id ?>'')">
+<input class="account-button1" type="button" value="Back" onclick="post('account.php', 'id', '<?php echo $id ?>')">
 
 </body>
 </html>

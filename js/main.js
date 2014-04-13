@@ -45,7 +45,7 @@ function addRequest(userId, json) {
 
 
     var Request = Requests.push( {
-        "user_id": user_id,
+        "user_id": userId,
         "restaurant": restaurant,
         "address": address,
         "phone": phone,

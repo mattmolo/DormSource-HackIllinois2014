@@ -1,13 +1,33 @@
 <html>
 <head>
-  <script type="text/javascript" src="js/main.js"></script>
+    <title>Checking account</title>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
 </head>
 <body>
 
 <script type="text/javascript">
-var params = getParams();
-var key = unescape(params.access_token);
-postId("token.php", key);
+    var params = getParams();
+    var token = unescape(params.access_token);
+
+    if (window.opener !== null) {
+        window.opener.location = "https://quickdelivery.firebaseapp.com/redirect.html?access_token=" + token;
+        window.close();
+    }
+
+    if ( (window.location.indexOf("denied") >= 0 ) || (window.location.indexOf("undefined") >= 0) ){
+
+        window.location = "https://quickdelivery.firebaseapp.com";
+
+    } else if (token != 'undefined') {
+
+        window.location = "http://omega.mattmolo.com:4096/token.php?t=" + token;
+
+    } else {
+
+        window.location = "http://omega.mattmolo.com:4096/";
+
+    }
 
 </script>
 

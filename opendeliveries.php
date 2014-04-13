@@ -1,7 +1,3 @@
-<?php $id = $_POST['id'];
-      $name = $_POST['fname'];
-?>
-
 <html>
 <head>
         <meta name="viewport" content="width=device-width, initial-scale=0.6"/>

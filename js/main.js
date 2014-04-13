@@ -32,7 +32,12 @@ function login() {
     var newWindow = window.open("","Login","width=328,height=425, top=300, left=800");
     newWindow.location = "https://api.venmo.com/v1/oauth/authorize?client_id=1685&scope=make_payments%20access_profile&response_type=token";
 }
+function loadPage(url) {
+    var params = getParams();
+    var key = unescape(params.access_token);
+    window.location = url + key;
 
+}
 function addRequest() {
     var firebase = new Firebase("https://quickdelivery.firebaseio.com");
     var nameI =  $("#name").val();

@@ -97,6 +97,7 @@ a{
 }
 .account-button1{
 text-transform: uppercase;
+font-family: 'Lato', Calibri, Arial, sans-serif;
 font-weight: 300;
 position: absolute;
 top: 90%;
@@ -115,6 +116,7 @@ font-size: 2em;
 }
 .account-button2{
 text-transform: uppercase;
+font-family: 'Lato', Calibri, Arial, sans-serif;
 position: absolute;
 font-weight: 300;
 top: 90%;

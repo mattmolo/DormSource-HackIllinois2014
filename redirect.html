@@ -15,7 +15,9 @@
         window.close();
     }
 
-    if ( (window.location.indexOf("denied") >= 0 ) || (window.location.indexOf("undefined") >= 0) ){
+    var location = "" + window.location;
+
+    if ( (location.indexOf("denied") >= 0 ) || (location.indexOf("undefined") >= 0) ){
 
         window.location = "https://quickdelivery.firebaseapp.com";
 

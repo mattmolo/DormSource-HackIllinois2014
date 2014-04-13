@@ -96,6 +96,7 @@ a{
 	text-transform: uppercase;
 }
 .account-button1{
+text-transform: uppercase;
 position: absolute;
 top: 90%;
 left: 33%;
@@ -111,6 +112,7 @@ font-size: 1.5em;
 	transform: translateX(-50%);
 }
 .account-button2{
+text-transform: uppercase;
 position: absolute;
 top: 90%;
 right: 33%;

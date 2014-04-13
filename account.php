@@ -32,63 +32,24 @@
 </div>
 
 <?php
-
+echo '<table id="table" class="requests"><tr style="font-size: 25px;"><td width="15%">Name</td><td width="15%">Restaurant</td><td width="25%">Note</td><td width="15%">Phone</td><td width="15%">Adress</td><td width="15%">Time</td></tr>';
 $requests = 'https://quickdelivery.firebaseio.com/Users/' . $id . '/requests.json';
 $json = file_get_contents($requests);
 $json = json_decode($json);
 foreach ($json as $key => $value) {
-    echo $key;
-}
-
-//$requests = 'https://quickdelivery.firebaseio.com/Requests/'.id.'.json';
+    $req = file_get_contents('https://quickdelivery.firebaseio.com/Requests/'.$key.'.json');
+    $req = json_decode($req);
+    echo '<tr><td></td><td>'.$req["name"].'</td><td>'.$req["restaurant"].'</td><td>'.$req["notes"].'</td><td>'.$req["phone"].'</td><td>'.$req["address"].'</td><td>'.$req["time"].'</td><tr>';
+    }
+echo '</table>';
 ?>
 
 
 
 
-<!-- <script>
 
-var firebase = new Firebase("https://quickdelivery.firebaseio.com");
-var request = firebase.child('Requests/');
-var userId = <?php echo $id ?>;
 
-var User = firebase.child('Users/' + userId);
-var Name = firebase.child('Users/' + userId).child("full_name").val();
-console.log(Name);
-var UserRequests = User.child('orders/');
 
-UserRequests.once('value',
-    function(dataSnapshot) {
-        dataSnapshot.forEach(
-            function(childSnapshot) {
-
-                $("#table").append(
-                    '<tr onclick="window.location = \'acknowledge.html?key=' + childSnapshot.name() + '\';"> ' +
-                    + "<td>" + childSnapshot.child("Name").val() + "</td>"
-                    + "<td>" + childSnapshot.child("Name").val() + "</td>"
-                    + "<td>" + childSnapshot.child("Place").val() + "</td>"
-                    + "<td>" + childSnapshot.child("Note").val() + "</td>"
-                    + "<td>" + childSnapshot.child("Phone").val() + "</td>"
-                    + "<td>" + childSnapshot.child("Location").val() + "</td>"
-                    + "<td>" + childSnapshot.child("Time").val() + "</td>"
-                    + "</tr>"
-                    );
-            }
-        );
-    }
-);
-</script> -->
-
-<table id="table" class="requests">
-<tr style="font-size: 25px;">
-    <td width="15%">Name</td>
-    <td width="15%">Place</td>
-    <td width="25%">Note</td>
-    <td width="15%">Phone</td>
-    <td width="15%">Location</td>
-    <td width="15%">Time</td>
-</tr>
-</table>
 
 <input class="account-button1" type="button" margin-right="20px" onclick="post('add.php', 'id', '<?php echo $id ?>')" value="Add stuffs!"><input class="account-button2" type="button" onclick="post('opendeliveries.php', 'id', '<?php echo $id ?>')" value="Volunteer!">
 

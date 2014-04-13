@@ -46,6 +46,7 @@ function addRequest(userId, json) {
 
     var Request = Requests.push( {
         "user_id": userId,
+        "name": full_name,
         "restaurant": restaurant,
         "address": address,
         "phone": phone,

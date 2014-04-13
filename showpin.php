@@ -32,7 +32,7 @@
         </div>
     </div>
     <div class="bigText3">Please give this code to the deliverer when you recieve your food!</div>
-    <div class="pricing-holder">
+    <div class="pricing-holder" style="position: absolute; top: 50%; left: 50%;     -webkit-transform: translateX(-50%); -moz-transform: translateX(-50%); -ms-transform: translateX(-50%); transform: translateX(-50%);">
     <div>
     <?php 
 

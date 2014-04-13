@@ -37,7 +37,7 @@ $requests = 'https://quickdelivery.firebaseio.com/Users/' . $id . '/requests.jso
 $json = file_get_contents($requests);
 $json = json_decode($json);
 foreach ($json as $key => $value) {
-    echo $value;
+    echo $key;
 }
 
 //$requests = 'https://quickdelivery.firebaseio.com/Requests/'.id.'.json';

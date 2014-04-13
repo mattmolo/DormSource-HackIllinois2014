@@ -31,12 +31,29 @@ $name = $_POST['fname'];
     </div>
 </div>
 
-<script type="text/javascript">
+<?php
 
+$id = $_POST['id'];
+
+echo '<table id="table" class="requests"><tr style="font-size: 25px;"><td width="15%">Name</td><td width="15%">Restaurant</td><td width="25%">Note</td><td width="15%">Phone</td><td width="15%">Address</td><td width="15%">Time</td></tr>';
+$requests = 'https://quickdelivery.firebaseio.com/Requests.json';
+$json = file_get_contents($requests);
+$json = json_decode($json);
+foreach ($json as $key => $value) {
+    $req = file_get_contents('https://quickdelivery.firebaseio.com/Requests/'.$key.'.json');
+    $req = json_decode($req, true);
+    if ($req["confirmation"] == 0) echo '<tr><td>'.$req["name"].'</td><td>'.$req["restaurant"].'</td><td>'.$req["note"].'</td><td>('.substr($req["phone"],1,3).') '.substr($req["phone"],4,3)."-".substr($req["phone"],7,4).'</td><td>'.$req["address"].'</td><td>'.$req["time"].'</td><tr>';
+    }
+echo '</table>';
+?>
+
+
+
+<!-- <script>
 
 var firebase = new Firebase("https://quickdelivery.firebaseio.com");
 var request = firebase.child('Requests/');
-var userId = <?php echo $_POST['id'] ?>;
+var userId = ;
 
 var User = firebase.child('Users/' + userId);
 var UserRequests = User.child('orders/');
@@ -73,7 +90,7 @@ request.once('value',
     <td width="15%">Location</td>
     <td width="15%">Time</td>
 </tr>
-</table>
+</table> -->
 
 
 <input class="account-button1" type="button" value="Back" onclick="post2('account.php', 'id', '<?php echo $id ?>', 'fname', '<?php echo $name ?>')">

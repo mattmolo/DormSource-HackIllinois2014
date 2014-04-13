@@ -31,8 +31,22 @@
     </div>
 </div>
 
-<script type="text/javascript">
+<?php
 
+$requests = 'https://quickdelivery.firebaseio.com/Users/' . $id . '/requests.json';
+$json = file_get_contents($requests);
+$json = json_decode($json);
+foreach ($json as $key => $value) {
+    echo $value;
+}
+
+//$requests = 'https://quickdelivery.firebaseio.com/Requests/'.id.'.json';
+?>
+
+
+
+
+<!-- <script>
 
 var firebase = new Firebase("https://quickdelivery.firebaseio.com");
 var request = firebase.child('Requests/');
@@ -63,7 +77,7 @@ UserRequests.once('value',
         );
     }
 );
-</script>
+</script> -->
 
 <table id="table" class="requests">
 <tr style="font-size: 25px;">

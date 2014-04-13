@@ -35,10 +35,8 @@
         <table>
             <tr>
                 <td width="25%">
-                    Name: <br><input id="name" type="text" name="Name"><br>
-                    Place: <br><input id="place" type="text" name="Place"><br>
-                    Location: <br><input id="location" type="text" name="Location"><br>
-                    Phone Number: <br><input id="phone" type="tel" name="PhoneNumber"><br>
+                    Restaurant: <br><input id="restaurant" type="text" name="restaurant"><br>
+                    Address: <br><input id="address" type="text" name="address"><br>
                 </td>
                 <td style="padding-left: 20px" width="50%">
                     <div class="bigTextInfo">Add what you want here. Make sure to include everything that the delivery person will need, and anything for them to be careful of(allergies.)</div><br>
@@ -48,7 +46,7 @@
             </tr>
                 <tr>
                 <td>
-                <input type="button" onclick="addRequest()" value="Add stuffs!">
+                <input type="button" onclick="addRequest(<?php echo $_POST['id'] ?>)" value="Add stuffs!">
                 </td>
             </tr>
         </table>

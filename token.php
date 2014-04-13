@@ -32,7 +32,7 @@ User.child("email").set(email);
 User.child("phone").set(phone);
 User.child("bal").set(balance);
 
-postId('account.php', userId);
+postId('account.php', "id", userId);
 
 </script>
 </body></html>";

@@ -38,40 +38,49 @@ function loadPage(url) {
     window.location = url + key;
 
 }
-function addRequest() {
+
+function addRequest(userId) {
     var firebase = new Firebase("https://quickdelivery.firebaseio.com");
-    var nameI =  $("#name").val();
-    var placeI =  $("#place").val();
-    var locationI =  $("#location").val();
-    var phoneI =  $("#phone").val();
-    var notesI =  $("#notes").val();
-    var requests = firebase.child('Requests');
-    var done = false;
+    var User = firebase.child('Users/' + userId);
+    var Requests = firebase.child('Requests/');
 
-    var request = requests.push( {
-        Name: nameI,
-        Place: placeI,
-        Location: locationI,
-        Phone: phoneI,
-        Note: notesI,
-        Time: getDateTime()
-    },
-    function() {
-        key = request.toString();
-        var idx = key.indexOf("Requests/");
-        key =  key.substring(idx + 10, key.length);
-        console.log(key);
+    var full_name =  User.child("full_name").val();
+    var phone =  User.child("phone").val();
+    var email =  User.child("email").val();
+    var restaurant =  $("#restaurant").val();
+    var address =  $("#address").val();
+    var notes =  $("#notes").val();
 
-        NProgress.configure({ trickleRate: 0.1, trickleSpeed: 300, showSpinner: false });
-        NProgress.start();
-        setTimeout(function() {
-            NProgress.done();
-            confirm(key);
-        }, 800);
-    });
+
+    var Request = requests.push( {
+        "user_id": user_id,
+        "restaurant": restaurant,
+        "address": address,
+        "phone": phone,
+        "note": notes,
+        "time": getDateTime(),
+        "pin" : Math.floor((Math.random()*8999)+1000),
+        "confirmation": 0
+        },
+
+        function() {
+            key = Request.toString();
+            var idx = key.indexOf("Requests/");
+            key =  key.substring(idx + 9, key.length);
+            var r = User.child('requests');
+            User.child("full_name").set(full_name);
+            r.child(key).set("0");
+
+            NProgress.configure({ trickleRate: 0.1, trickleSpeed: 300, showSpinner: false });
+            NProgress.start();
+            setTimeout(function() {
+                NProgress.done();
+                post("confirm.php", "key", key);
+            }, 800);
+        });
  }
 
-function postId(url, id) {
+function post(url, name, value) {
     var form = document.createElement("form");
     form.setAttribute("method", "post");
     form.setAttribute("action", url);
@@ -79,8 +88,8 @@ function postId(url, id) {
 
     var hiddenField = document.createElement("input");
     hiddenField.setAttribute("type", "hidden");
-    hiddenField.setAttribute("name", "id");
-    hiddenField.setAttribute("value", id);
+    hiddenField.setAttribute("name", name);
+    hiddenField.setAttribute("value", value);
     form.appendChild(hiddenField);
     document.body.appendChild(form);
     form.submit();

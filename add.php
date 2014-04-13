@@ -11,10 +11,8 @@
         <link rel="stylesheet" type="text/css" href="nprogress/nprogress.css" media="screen" title="no title"/>
         <script type="text/javascript" src="https://cdn.firebase.com/v0/firebase.js"></script>
         <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-        <script type="text/javascript" src="nprogress/nprogress.js"></script>
+        <script type="text/javascript" src="js/nprogress/nprogress.js"></script>
         <script type="text/javascript" src="js/main.js"></script>
-
-
 </head>
 <body>
 <div class="nav-top">

@@ -37,7 +37,7 @@ var userId = <?php echo $_POST['id'] ?>;
 var User = firebase.child('Users/' + userId);
 var UserRequests = User.child('orders/');
 
-UserRequests.once('value',
+request.once('value',
     function(dataSnapshot) {
         dataSnapshot.forEach(
             function(childSnapshot) {

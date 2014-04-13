@@ -68,7 +68,6 @@ function addRequest(userId) {
             var idx = key.indexOf("Requests/");
             key =  key.substring(idx + 9, key.length);
             var r = User.child('requests');
-            User.child("full_name").set(full_name);
             r.child(key).set("0");
 
             NProgress.configure({ trickleRate: 0.1, trickleSpeed: 300, showSpinner: false });

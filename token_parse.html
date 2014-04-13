@@ -1,0 +1,36 @@
+<html>
+    <head>
+      <script type="text/javascript" src="https://cdn.firebase.com/v0/firebase.js"></script>
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+        <script type="text/javascript" src="nprogress/nprogress.js"></script>
+        <script type="text/javascript" src="js/main.js"></script>
+    </head>
+<body>
+<script>
+var json = {"data": 
+                {"balance": "0.00", 
+                "user":   
+                    {
+                    "username": "john-lee-91", 
+                    "first_name": "John", 
+                    "last_name": "Lee", 
+                    "display_name": "John Lee", 
+                    "is_friend": false, 
+                    "friends_count": 9, 
+                    "about": "No Short Bio", 
+                    "email": "johnmlee101@gmail.com", 
+                    "phone": "12083405914", 
+                    "profile_picture_url": "https://s3.amazonaws.com/venmo/no-image.gif", 
+                    "id": "1396752741564416612", "date_joined": "2014-04-12T03:38:22"
+                    }
+                }
+            };
+var user_id = json.data.user.id;
+var full_name = json.data.user.first_name + " " + json.data.user.last_name;
+var email = json.data.user.email;
+var phone = json.data.user.phone;
+var balance = json.data.balance;
+
+</script>
+</body>
+</html>

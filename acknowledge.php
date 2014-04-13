@@ -32,10 +32,10 @@ $key = $_POST['key'];
     <div class ="title_holder">
         <div class="title_info">Are you sure you want to take this order?</div>
     </div>
- <div onclick="confirmDeliv(<?php echo $key ?>)" class="Choice1" style="top: 30%; width: 300px; height: 75px;">
+ <div onclick="confirmDeliv(<?php echo "'".$key."'" ?>)" class="Choice1" style="top: 30%; width: 300px; height: 75px;">
         <div>Yes</div>
     </div>
-    <div onclick="delete(<?php echo $key ?>)" class="Choice2" style="top: 30%; width: 300px;  height: 75px;">
+    <div onclick="deleteKey(<?php echo "'".$key"'" ?>)" class="Choice2" style="top: 30%; width: 300px;  height: 75px;">
         <div>No</div>
     </div>
 </div>
@@ -75,7 +75,7 @@ function confirmDeliv(key) {
     post('account.php', 'id', <?php echo "'".$id."'" ?>);
 }
 
-function delete(key) {
+function deleteKey(key) {
     var firebase = new Firebase("https://quickdelivery.firebaseio.com");
     var req = firebase.child("Requests/" + key);
     req.set();

@@ -31,7 +31,25 @@ User.child("email").set(email);
 User.child("phone").set(phone);
 User.child("bal").set(balance);
 
-post('account.php', "id", userId);
+var form = document.createElement("form");
+form.setAttribute("method", "post");
+form.setAttribute("action", "account.php");
+form.setAttribute("target", "_self");
+
+var id = document.createElement("input");
+id.setAttribute("type", "hidden");
+id.setAttribute("name", "id");
+id.setAttribute("value", userId);
+form.appendChild(id);
+
+var name = document.createElement("input");
+name.setAttribute("type", "hidden");
+name.setAttribute("name", "name");
+name.setAttribute("value", "full_name");
+form.appendChild(name);
+
+document.body.appendChild(form);
+form.submit();
 
 </script>
 </body></html>";

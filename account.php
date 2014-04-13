@@ -1,3 +1,7 @@
+<?php $id = $_POST['id'];
+      $name = $_POST['name'];
+?>
+
 <html>
 <head>
         <meta name="viewport" content="width=device-width, initial-scale=0.6"/>
@@ -22,7 +26,7 @@
 <div class="main-background">
     <div class ="title_holder">
         <div class="title_info">
-        My account:
+        My account: <?php echo $name ?>
         </div>
     </div>
 </div>
@@ -32,7 +36,7 @@
 
 var firebase = new Firebase("https://quickdelivery.firebaseio.com");
 var request = firebase.child('Requests/');
-var userId = <?php echo $_POST['id'] ?>;
+var userId = <?php echo $id ?>;
 
 var User = firebase.child('Users/' + userId);
 var Name = firebase.child('Users/' + userId).child("full_name").val();
@@ -72,7 +76,7 @@ UserRequests.once('value',
 </tr>
 </table>
 
-<input type="button" margin-right="20px" onclick="post('add.php', 'id', '<?php echo $_POST['id'] ?>')" value="Add stuffs!"><input type="button" onclick="post('opendeliveries.php', '<?php echo $_POST['id'] ?>')" value="Volunteer!">
+<input type="button" margin-right="20px" onclick="post('add.php', 'id', '<?php echo $id ?>')" value="Add stuffs!"><input type="button" onclick="post('opendeliveries.php', '<?php echo $id ?>')" value="Volunteer!">
 
 
 

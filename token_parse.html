@@ -7,43 +7,38 @@
     </head>
 <body>
 <script>
-var json = {"data": 
-                {"balance": "0.00", 
-                "user":   
+var json = {"data":
+                {"balance": "0.00",
+                "user":
                     {
-                    "username": "john-lee-91", 
-                    "first_name": "John", 
-                    "last_name": "Lee", 
-                    "display_name": "John Lee", 
-                    "is_friend": false, 
-                    "friends_count": 9, 
-                    "about": "No Short Bio", 
-                    "email": "johnmlee101@gmail.com", 
-                    "phone": "12083405914", 
-                    "profile_picture_url": "https://s3.amazonaws.com/venmo/no-image.gif", 
-                    "id": "1396752741564416612", "date_joined": "2014-04-12T03:38:22"
+                    "username": "john-lee-91",
+                    "first_name": "Jooolololohn",
+                    "last_name": "Leeeeee",
+                    "display_name": "John Lee",
+                    "is_friend": false,
+                    "friends_count": 9,
+                    "about": "No Short Bio",
+                    "email": "@gmail.com",
+                    "phone": "12083405914",
+                    "profile_picture_url": "https://s3.amazonaws.com/venmo/no-image.gif",
+                    "id": "139652741564416615", "date_joined": "2014-04-12T03:38:22"
                     }
                 }
             };
+
 var userId = json.data.user.id;
 var full_name = json.data.user.first_name + " " + json.data.user.last_name;
 var email = json.data.user.email;
 var phone = json.data.user.phone;
 var balance = json.data.balance;
 
-
-
 var firebase = new Firebase("https://quickdelivery.firebaseio.com");
-var random = firebase.child('Users');
-random = random.child(userId);
-var child = firebase.child('Users');
-json = {"full_name": full_name, "email": email, "phone": phone, "bal": balance};
-child = child.child(userId);
-child.set(json,
-  function() {
-    console.log(json);
-  });
+var User = firebase.child('Users/' + userId);
 
+User.child("full_name").set(full_name);
+User.child("email").set(email);
+User.child("phone").set(phone);
+User.child("bal").set(balance);
 
 </script>
 </body>

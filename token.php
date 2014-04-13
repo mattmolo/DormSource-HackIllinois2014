@@ -16,11 +16,22 @@
 var json = <?php echo $json; ?>;
 var token = <?php echo $token; ?>;
 
+
+var userId = json.data.user.id;
+var full_name = json.data.user.first_name + " " + json.data.user.last_name;
+var email = json.data.user.email;
+var phone = json.data.user.phone;
+var balance = json.data.balance;
+
 var firebase = new Firebase("https://quickdelivery.firebaseio.com");
-var requests = firebase.child('Users');
-var request = requests.push(json,
-  function() {
-    //window.location = '/choice.html?t=' + token;
-  });
+var User = firebase.child('Users/' + userId);
+
+User.child("full_name").set(full_name);
+User.child("email").set(email);
+User.child("phone").set(phone);
+User.child("bal").set(balance);
+
+window.location = '/choice.html?t=' + token;
+
 </script>
 </body></html>";

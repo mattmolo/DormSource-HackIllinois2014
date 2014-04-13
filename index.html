@@ -7,11 +7,9 @@
 </head>
 <body>
 <div class="nav-top">
-    <a href="https://api.venmo.com/v1/oauth/authorize?client_id=1685&scope=make_payments%20access_profile">
-    <div>
+    <div onClick="login()">
         Login
     </div>
-    </a>
     <a href="index.html">
         <div>
             Home
@@ -32,13 +30,11 @@
     </div>
     <div class="desc-img2">
     </div>
-    <a href="https://api.venmo.com/v1/oauth/authorize?client_id=1685&scope=make_payments%20access_profile">
-    <div class="login" style="color: rgba(255,255,255,0.8);">
+    <div class="login" style="color: rgba(255,255,255,0.8);" onClick="login()">
         <div>
         Login with venmo
         </div>
     </div>
-    </a>
 </div>
 <div class="page-transition">
 </div>
@@ -80,14 +76,17 @@
             So what are you waiting for?
             <br> 
             </div>
-            <a href="https://api.venmo.com/v1/oauth/authorize?client_id=1685&scope=make_payments%20access_profile">
-            <div class="button">
+            <div class="button" onClick="login()">
             Create an account now to get started!
             </div>
-            </a>
         </div>
     </div>
 </div>
-
+<script>
+function login() {
+    var newWindow = window.open("","Login","width=328,height=425");
+    newWindow.location = "https://api.venmo.com/v1/oauth/authorize?client_id=1685&scope=make_payments%20access_profile&response_type=token";
+}
+</script>
 </body>
 </html>

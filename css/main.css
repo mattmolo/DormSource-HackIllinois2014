@@ -528,6 +528,9 @@ input[type=button]:hover {
     .bigTextInfo {
     font-size: 0.9em;
     }
+    .form{
+        top: 20%;
+    }
 }
 @media screen and (max-width: 1451px) {
     .info-content{

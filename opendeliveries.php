@@ -43,52 +43,6 @@ foreach ($json as $key => $value) {
 echo '</table>';
 ?>
 
-
-
-<!-- <script>
-
-var firebase = new Firebase("https://quickdelivery.firebaseio.com");
-var request = firebase.child('Requests/');
-var userId = ;
-
-var User = firebase.child('Users/' + userId);
-var UserRequests = User.child('orders/');
-
-request.once('value',
-    function(dataSnapshot) {
-        dataSnapshot.forEach(
-            function(childSnapshot) {
-                if (childSnapshot.child("Confirmation").val() != 1) {
-                $("#table").append(
-                    '<tr onclick="window.location = \'acknowledge.html?key=' + childSnapshot.name() + '\';"> ' +
-                    + "<td>" + childSnapshot.child("Name").val() + "</td>"
-                    + "<td>" + childSnapshot.child("Name").val() + "</td>"
-                    + "<td>" + childSnapshot.child("Place").val() + "</td>"
-                    + "<td>" + childSnapshot.child("Note").val() + "</td>"
-                    + "<td>" + childSnapshot.child("Phone").val() + "</td>"
-                    + "<td>" + childSnapshot.child("Location").val() + "</td>"
-                    + "<td>" + childSnapshot.child("Time").val() + "</td>"
-                    + "</tr>"
-                    );
-                }
-            }
-        );
-    }
-);
-</script>
-
-<table id="table" class="requests">
-<tr style="font-size: 25px;">
-    <td width="15%">Name</td>
-    <td width="15%">Place</td>
-    <td width="25%">Note</td>
-    <td width="15%">Phone</td>
-    <td width="15%">Location</td>
-    <td width="15%">Time</td>
-</tr>
-</table> -->
-
-
 <input class="account-button1" style="width: 5%;" type="button" value="Back" onclick="post('account.php', 'id', '<?php echo $id ?>')">
 
 </body>

@@ -31,7 +31,7 @@ User.child("email").set(email);
 User.child("phone").set(phone);
 User.child("bal").set(balance);
 
-//window.location = '/choice.html?t=' + token;
+postId(account.php, userId);
 
 </script>
 </body></html>";

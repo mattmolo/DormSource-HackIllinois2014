@@ -45,11 +45,11 @@ form.appendChild(id);
 var name = document.createElement("input");
 name.setAttribute("type", "hidden");
 name.setAttribute("name", "name");
-name.setAttribute("value", "full_name");
+name.setAttribute("value", full_name);
 form.appendChild(name);
 
 document.body.appendChild(form);
 form.submit();
 
 </script>
-</body></html>";
+</body></html>

@@ -50,7 +50,7 @@
 </div>
 
 
-<input class="account-button1" type="button" value="Back" onclick="post('account.php', 'id', '<?php echo $id ?>'')">
+<input class="account-button1" type="button" value="Back" onclick="post('account.php', 'id', '<?php echo $id ?>')">
 
 </body>
 </html>

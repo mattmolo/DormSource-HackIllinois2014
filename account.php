@@ -35,6 +35,8 @@ var request = firebase.child('Requests/');
 var userId = <?php echo $_POST['id'] ?>;
 
 var User = firebase.child('Users/' + userId);
+var Name = firebase.child('Users/' + userId).child("full_name").val();
+console.log(Name);
 var UserRequests = User.child('orders/');
 
 UserRequests.once('value',
@@ -70,7 +72,7 @@ UserRequests.once('value',
 </tr>
 </table>
 
-
+<input type="button" margin-right="20px" onclick="post('add.php', 'id', '<?php echo $_POST['id'] ?>')" value="Add stuffs!"><input type="button" onclick="post('opendeliviries.php', <?php echo $_POST['id'] ?>)" value="Volunteer!">
 
 
 

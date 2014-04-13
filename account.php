@@ -1,5 +1,5 @@
 <?php $id = $_POST['id'];
-      $name = $_POST['name'];
+      $name = $_POST['fname'];
 ?>
 
 <html>
@@ -26,7 +26,7 @@
 <div class="main-background">
     <div class ="title_holder">
         <div class="title_info">
-        My account: <?php echo $fname ?>
+        My account: <?php echo $name ?>
         </div>
     </div>
 </div>

@@ -95,6 +95,32 @@ a{
 	text-align: left;
 	text-transform: uppercase;
 }
+.account-button1{
+position: absolute;
+top: 90%;
+left: 33%;
+width: 80px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    -webkit-transform: translateX(-50%);
+	-moz-transform: translateX(-50%);
+	-ms-transform: translateX(-50%);
+	transform: translateX(-50%);
+}
+.account-button2{
+position: absolute;
+top: 90%;
+right: 33%;
+width: 80px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    -webkit-transform: translateX(50%);
+	-moz-transform: translateX(50%);
+	-ms-transform: translateX(50%);
+	transform: translateX(50%);
+}
 .title_holder{
     position: absolute;
     background: rgba(255,255,255,0.2);

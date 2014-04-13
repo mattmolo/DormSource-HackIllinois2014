@@ -35,7 +35,7 @@ $key = $_POST['key'];
  <div onclick="confirmDeliv(<?php echo "'".$key."'" ?>)" class="Choice1" style="top: 30%; width: 300px; height: 75px;">
         <div>Yes</div>
     </div>
-    <div onclick="deleteKey(<?php echo "'".$key"'" ?>)" class="Choice2" style="top: 30%; width: 300px;  height: 75px;">
+    <div onclick="deleteKey(<?php echo "'".$key."'" ?>)" class="Choice2" style="top: 30%; width: 300px;  height: 75px;">
         <div>No</div>
     </div>
 </div>

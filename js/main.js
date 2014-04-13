@@ -67,7 +67,7 @@ function addRequest(userId, json) {
             NProgress.start();
             setTimeout(function() {
                 NProgress.done();
-                post("confirm.php", "key", key);
+                post2("confirm.php", 'id', userId, 'key', key);
             }, 800);
         });
  }
@@ -86,6 +86,29 @@ function post(url, name, value) {
     document.body.appendChild(form);
     form.submit();
 }
+
+function post2(url, name1, value1, name2, value2) {
+    var form = document.createElement("form");
+    form.setAttribute("method", "post");
+    form.setAttribute("action", url);
+    form.setAttribute("target", "_self");
+
+    var hiddenField1 = document.createElement("input");
+    hiddenField1.setAttribute("type", "hidden");
+    hiddenField1.setAttribute("name", name1);
+    hiddenField1.setAttribute("value", value1);
+    form.appendChild(hiddenField1);
+
+    var hiddenField2 = document.createElement("input");
+    hiddenField2.setAttribute("type", "hidden");
+    hiddenField2.setAttribute("name", name2);
+    hiddenField2.setAttribute("value", value2);
+    form.appendChild(hiddenField2);
+
+    document.body.appendChild(form);
+    form.submit();
+}
+
 
 function getParams() {
     var idx = document.URL.indexOf('?');

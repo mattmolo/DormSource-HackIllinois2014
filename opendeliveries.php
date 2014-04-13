@@ -41,7 +41,7 @@ request.once('value',
     function(dataSnapshot) {
         dataSnapshot.forEach(
             function(childSnapshot) {
-
+                if (childSnapshot.child("Confirmation").val() != 1) {
                 $("#table").append(
                     '<tr onclick="window.location = \'acknowledge.html?key=' + childSnapshot.name() + '\';"> ' +
                     + "<td>" + childSnapshot.child("Name").val() + "</td>"
@@ -53,6 +53,7 @@ request.once('value',
                     + "<td>" + childSnapshot.child("Time").val() + "</td>"
                     + "</tr>"
                     );
+                }
             }
         );
     }

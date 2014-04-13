@@ -72,6 +72,7 @@ function addRequest() {
  }
 
 function postId(url, id) {
+    var form = document.createElement("form");
     form.setAttribute("method", "post");
     form.setAttribute("action", url);
     form.setAttribute("target", "_self");

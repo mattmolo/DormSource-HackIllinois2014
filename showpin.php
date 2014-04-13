@@ -48,7 +48,7 @@
 </div>
 
 
-<input class="account-button1" type="button" value="Back" onclick="post2('account.php', 'id', '<?php echo $id ?>', 'fname', '<?php echo $name ?>')">
+<input class="account-button1" type="button" value="Back" onclick="post('account.php', 'id', '<?php echo $id ?>'')">
 
 </body>
 </html>

@@ -64,7 +64,7 @@ $key = $_POST['key'];
 
 
 <script type="text/javascript">
-var key = <?php "'".echo $key."'" ?>;
+var key = <?php echo "'".$key."'" ?>;
 var firebase = new Firebase("https://quickdelivery.firebaseio.com");
 var request = firebase.child('Requests/' + key);
 var data = "";

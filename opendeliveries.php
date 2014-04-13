@@ -71,8 +71,7 @@ request.once('value',
 </table>
 
 
-
-
+<input class="account-button1" style="width: 5%;" type="button" value="Back" onclick="post('account.php', 'id', '<?php echo $id ?>')">
 
 </body>
 </html>
